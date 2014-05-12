@@ -1,0 +1,1 @@
+int main(){for(int i=0;i<26;i++){array(int)x=({97+i,65+i,227,129,130+i,227,130,162+i,227,130,162+i,227,129,130+i,65+i,97+i});for(int j=0;j<16;j++)Stdio.stdout.write(int2char(x[j]));}}

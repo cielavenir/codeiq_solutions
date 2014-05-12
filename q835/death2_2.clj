@@ -1,0 +1,1 @@
+(print (apply str (map (fn [i] (apply str (map (fn [x] (char (+ (int x) i))) "aAあアアあAa"))) (range 26))))

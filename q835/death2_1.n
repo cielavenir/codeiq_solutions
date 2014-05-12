@@ -1,0 +1,1 @@
+foreach(i in $[0..25])foreach(j in $[0..7])System.Console.Write((array[97,65,12354,12450,12450,12354,65,97][j]+i):>char);

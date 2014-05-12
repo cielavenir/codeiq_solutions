@@ -1,0 +1,1 @@
+cat(intToUtf8(outer(utf8ToInt("aAあアアあAa"),0:25,'+')))

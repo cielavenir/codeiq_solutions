@@ -1,0 +1,1 @@
+print''.join(''.join([unichr(x+i)for x in[97,65,12354,12450,12450,12354,65,97]]) for i in range(26))

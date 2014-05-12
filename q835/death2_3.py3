@@ -1,0 +1,1 @@
+print(''.join(''.join(chr(ord(x)+i)for x in'aAあアアあAa')for i in range(26)))

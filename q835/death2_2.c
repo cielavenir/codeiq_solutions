@@ -1,0 +1,1 @@
+i;main(j){setlocale(0,"");for(;i<26;i++)for(j=0;j<8;j++)putwchar(L"aAあアアあAa"[j]+i);}

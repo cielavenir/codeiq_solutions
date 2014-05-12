@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+$script = <<-EOS
+sudo apt-get update -y
+sudo apt-get install git -y
+#sudo apt-get install figlet -y # for codeiq790
+#figlet 'Hello Vagrant!!'
+EOS
+VAGRANTFILE_API_VERSION = "2"
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.provider :virtualbox do |vb|
+    # VirtualBoxのVM名を指定
+    vb.name = "hello_vagrant"
+  end
+  # Ubuntu 12.04 LTSのBOX名を設定
+  config.vm.box = "precise32"
+  # Ubuntu 12.04 LTSのBOXのURLを設定
+  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+  # VagrantによるVM起動時のタイムアウトを設定（秒単位）
+  config.vm.boot_timeout = 360
+  # プロビジョニング方法を指定（シェル）
+  config.vm.provision :shell, inline: $script
+
+  #config.vm.provision :chef_solo do |chef|
+  #  chef.cookbooks_path = "cookbooks"
+  #  chef.add_recipe "lightlang"
+  #end
+end

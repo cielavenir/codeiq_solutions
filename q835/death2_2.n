@@ -1,0 +1,1 @@
+foreach(i in$[0..25])foreach(j in$[0..7])System.Console.Write(("aAあアアあAa"[j]:>int+i):>char)

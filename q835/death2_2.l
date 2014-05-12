@@ -1,0 +1,1 @@
+(loop for i to 25 collect (princ (map 'string #'(lambda (x) (code-char (+ (char-code x) i))) "aAあアアあAa")))

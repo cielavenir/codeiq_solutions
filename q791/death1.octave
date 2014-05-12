@@ -1,0 +1,2 @@
+#!/usr/bin/env octave -q
+printf("%s\n",toupper("lds"));

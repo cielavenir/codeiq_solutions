@@ -1,0 +1,1 @@
+class Z{static void Main(){for(int i=0;i<26;i++)for(int j=0;j<8;j++)System.Console.Write((char)("aAあアアあAa"[j]+i));}}

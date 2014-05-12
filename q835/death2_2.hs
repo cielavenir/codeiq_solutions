@@ -1,0 +1,1 @@
+main=putStr$concatMap(\i->map(\x->toEnum$i+fromEnum x)"aAあアアあAa")[0..25]

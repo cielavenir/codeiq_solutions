@@ -1,0 +1,1 @@
+for i=0 to 25 do List.map (fun e -> print_char(Char.chr(e))) [97+i;65+i;227;129;130+i;227;130;162+i;227;130;162+i;227;129;130+i;65+i;97+i] done;;

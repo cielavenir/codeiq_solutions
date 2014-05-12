@@ -1,0 +1,1 @@
+object Main{def main(z:Array[String]){for(i<-0 to 25)for(j<-0 to 7)print(("aAあアアあAa"(j)+i).toChar)}}

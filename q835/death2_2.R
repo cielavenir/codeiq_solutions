@@ -1,0 +1,1 @@
+for(i in 0:25)cat(intToUtf8(utf8ToInt("aAあアアあAa")+i))

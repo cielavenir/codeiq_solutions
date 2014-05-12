@@ -1,0 +1,1 @@
+26.times{i->e=[97,65,12354,12450].collect{x->(x+i) as char}.join();print e+e.reverse()}

@@ -1,0 +1,1 @@
+for(s=i='';i<26;i++)s+=String.fromCharCode(97+i,65+i,12354+i,12450+i,12450+i,12354+i,65+i,97+i);console.log(s)

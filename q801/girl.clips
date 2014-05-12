@@ -1,0 +1,4 @@
+(printout t "ガールフレンドめっちゃほしい！" crlf)
+(run)
+(exit)
+;empty line

@@ -1,0 +1,1 @@
+26.times{|i|e=[97+i,65+i,12354+i,12450+i].pack'U*';$><<e+e.reverse}
