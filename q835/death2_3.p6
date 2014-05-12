@@ -1,1 +1,1 @@
-for 0..25 ->$i {print<==map {chr(ord($_)+$i)}<==split('',"aAあアアあAa");}
+for ^26 ->$i {print<==map {chr($_+$i)}<=="aAあアアあAa".ord}
