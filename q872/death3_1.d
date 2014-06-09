@@ -1,0 +1,1 @@
+import std.stdio;void main(){foreach(i;65..123)write(cast(char)i);}

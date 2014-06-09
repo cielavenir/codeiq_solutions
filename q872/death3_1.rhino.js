@@ -1,0 +1,1 @@
+for(i=65;i<=122;i++)java.lang.System.out.print(String.fromCharCode(i))

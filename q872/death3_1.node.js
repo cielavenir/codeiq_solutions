@@ -1,0 +1,1 @@
+for(s=i='';i<58;i++)s+=String.fromCharCode(65+i);console.log(s)

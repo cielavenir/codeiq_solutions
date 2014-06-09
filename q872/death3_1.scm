@@ -1,0 +1,1 @@
+(map (lambda (i) (display(integer->char(+ i 65)))) (iota 58))

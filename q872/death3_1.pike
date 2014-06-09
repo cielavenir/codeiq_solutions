@@ -1,0 +1,1 @@
+int main(){for(int i=65;i<122;i++)Stdio.stdout.write(int2char(i));}}

@@ -1,0 +1,1 @@
+print map chr,65..122

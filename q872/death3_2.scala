@@ -1,0 +1,1 @@
+object Main{def main(z:Array[String]){('A'to'z').map(print)}}

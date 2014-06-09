@@ -1,0 +1,1 @@
+for i in `seq 65 122`;do printf '\'`printf %o $i`;done

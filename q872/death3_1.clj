@@ -1,0 +1,1 @@
+(print (apply str (map char (range 65 123))))

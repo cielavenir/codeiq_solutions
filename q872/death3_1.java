@@ -1,0 +1,1 @@
+class Main{public static void main(String[]z){for(int i=64;++i<=122;)System.out.print((char)i);}}

@@ -1,0 +1,1 @@
+print(''.join(map(chr,range(65,123))))

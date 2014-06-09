@@ -1,0 +1,1 @@
+for i in 65..122:echo(chr(i))

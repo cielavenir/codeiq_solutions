@@ -29,3 +29,7 @@
 ### q835
 - 第2回デスマコロシアム
 - <https://codeiq.jp/ace/tbpgr_colosseum_manager/q835>
+
+### q872
+- 第3回デスマコロシアム
+- <https://codeiq.jp/ace/tbpgr_colosseum_manager/q872>

@@ -1,0 +1,1 @@
+main=putStr$map toEnum[65..122]
