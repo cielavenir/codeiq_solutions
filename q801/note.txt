@@ -1,0 +1,6 @@
+Assembler(gcc):  gcc -O —S m32 girl.cを適当に編集
+Assembler(nasm): https://github.com/tbpgr/ideone_samples/blob/master/hello_world/assembler_nasm/hello_world.asmを参考に
+Brainf**k:       https://github.com/cielavenir/codeiq_solutions/blob/master/q835/death2_bf.c
+Intercal:        http://qiita.com/cielavenir/items/0c9720f7df6d796a547a
+Lazy K:          http://qiita.com/cielavenir/items/f4428c6a2aefbf8af532
+WhiteSpace:      http://qiita.com/cielavenir/items/ebca62f3e689c049ac24
