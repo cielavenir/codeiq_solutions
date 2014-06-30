@@ -1,1 +1,1 @@
-object Main{def main(z:Array[String]){for(i<-0 to 25)for(j<-0 to 7)print((Array(97,65,12354,12450,12450,12354,65,97)(j)+i).toChar)}}
+object Main extends App{for(i<-0 to 25)for(j<-0 to 7)print((Array(97,65,12354,12450,12450,12354,65,97)(j)+i).toChar)}

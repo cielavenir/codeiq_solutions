@@ -1,0 +1,1 @@
+print chr for 65..122

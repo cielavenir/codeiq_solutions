@@ -2,7 +2,7 @@
 #coding:utf-8
 raise 'Ruby 1.9+ is required' if RUBY_VERSION<'1.9'
 Encoding.default_external='UTF-8'
-p $<.read.size
+p $<.read.chomp.size
 
 __END__
 With LF:

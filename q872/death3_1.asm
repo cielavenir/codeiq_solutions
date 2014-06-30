@@ -1,3 +1,4 @@
+bits 32
 mov edi,65
 A:
 push edi

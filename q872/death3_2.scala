@@ -1,1 +1,1 @@
-object Main{def main(z:Array[String]){('A'to'z').map(print)}}
+object Main extends App{('A'to'z').map(print)}

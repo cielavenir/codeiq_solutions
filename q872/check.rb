@@ -2,7 +2,7 @@
 #coding:utf-8
 raise 'Ruby 1.9+ is required' if RUBY_VERSION<'1.9'
 Encoding.default_external='UTF-8'
-src=$<.read
+src=$<.read.chomp
 type=src.chars.to_a.uniq.size
 puts "Length: #{src.size}"
 puts "Type:   #{type}"

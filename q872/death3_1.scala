@@ -1,1 +1,1 @@
-object Main{def main(z:Array[String]){for(i<-65 to 122)print(i.toChar)}}
+object Main extends App{for(i<-65 to 122)print(i.toChar)}
