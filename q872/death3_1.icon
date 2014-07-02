@@ -1,0 +1,4 @@
+#!/usr/bin/env icon
+procedure main()
+every n:=65to 122do writes(char(n))
+end

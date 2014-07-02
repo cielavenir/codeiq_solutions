@@ -1,0 +1,5 @@
+#!/usr/bin/env icon
+procedure main()
+s:="lds"
+every i:=0to 3do writes(char((ord(s[i])-32)))
+end

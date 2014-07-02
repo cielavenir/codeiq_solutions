@@ -1,0 +1,1 @@
+procedure main();every n:=1to 8do every writes(char(36to 117by n*2));end

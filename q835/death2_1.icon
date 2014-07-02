@@ -1,0 +1,4 @@
+procedure main()
+every i:=0to 25do
+every j:=0to 16do writes(char([97+i,65+i,227,129,130+i,227,130,162+i,227,130,162+i,227,129,130+i,65+i,97+i][j]))
+end

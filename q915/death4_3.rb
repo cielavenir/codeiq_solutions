@@ -1,0 +1,1 @@
+8.times{|j|36.step 0x74,-~j*2,&method(:putc)}
