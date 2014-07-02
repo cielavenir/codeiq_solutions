@@ -1,0 +1,1 @@
+for(J in 1:8)cat(intToUtf8(36+0:(40/J)*J*2))

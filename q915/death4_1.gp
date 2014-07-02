@@ -1,0 +1,1 @@
+for(j=1,8,for(k=0,40/j,print1(Strchr(36+k*j*2))))

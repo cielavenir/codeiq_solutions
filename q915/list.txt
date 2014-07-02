@@ -1,0 +1,50 @@
+Ada
+Assembler (gcc)
+AWK (gawk)
+AWK (mawk)
+Bash
+Brainf**k
+C
+C99 strict
+C++ 4.3.2
+C++ 4.8.1
+C++11
+Objective-C
+C#
+Clojure
+Common Lisp
+D
+Erlang
+F#
+Falcon
+Fortran
+Go
+Groovy
+Haskell
+Java
+Java7
+JavaScript (rhino)
+JavaScript (spidermonkey)
+Lua
+Nemerle
+Nice
+Nimrod
+Node.js
+Ocaml
+Octave
+PARI/GP
+Pascal (fpc)
+Pascal (gpc)
+Perl
+Perl 6
+PHP
+Pike
+Python
+Python 3
+R
+Ruby
+Scala
+Scheme
+Smalltalk
+Tcl
+VB.NET

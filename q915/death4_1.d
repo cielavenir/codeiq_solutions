@@ -1,0 +1,1 @@
+import std.stdio;void main(){foreach(J;1..9)foreach(I;0..40/J+1)write(cast(char)(36+I*J*2));}

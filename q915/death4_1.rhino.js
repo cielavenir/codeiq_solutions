@@ -1,0 +1,1 @@
+for(J=0;++J<9;)for(I=36;I<117;I+=J*2)java.lang.System.out.print(String.fromCharCode(I))

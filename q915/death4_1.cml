@@ -1,0 +1,1 @@
+for j=1 to 8 do for k=0 to 40/j do print_char(Char.chr(36+k*j*2)) done done;;

@@ -1,0 +1,1 @@
+1 to:8 do:[:J|0 to:40/J do:[:I|Transcript show:(I*J*2+36) asCharacter asString]].

@@ -1,0 +1,1 @@
+for(R=J='';++J<9;)for(I=36;I<117;I+=J*2)R+=String.fromCharCode(I);console.log(R)

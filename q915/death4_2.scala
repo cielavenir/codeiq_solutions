@@ -1,0 +1,1 @@
+object Main extends App{for(J<-1 to 8)('$'to'u'by(J*2).toChar)map print}

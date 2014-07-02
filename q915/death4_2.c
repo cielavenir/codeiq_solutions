@@ -1,0 +1,1 @@
+J;main(I){while(++J<9)for(I=0;I<=40/J;I++)putchar(36+I*J*2);}

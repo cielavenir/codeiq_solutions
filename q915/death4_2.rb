@@ -1,0 +1,1 @@
+1.upto(8){|j|36.step 117,j*2,&method(:putc)}

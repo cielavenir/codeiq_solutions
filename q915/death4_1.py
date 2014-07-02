@@ -1,0 +1,1 @@
+print(''.join(''.join(chr(I)for I in range(36,117,J*2))for J in range(1,9)))

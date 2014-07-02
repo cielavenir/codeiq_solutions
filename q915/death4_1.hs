@@ -1,0 +1,1 @@
+main=putStr$concatMap(\j->map(\k->toEnum(36+k*j*2))[0..40`div`j])[1..8]

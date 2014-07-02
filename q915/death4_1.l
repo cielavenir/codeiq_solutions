@@ -1,0 +1,1 @@
+(loop for J from 1 to 8 collect (loop for I from 0 to (/ 40 J) collect (princ (code-char (+ (* I (* J 2)) 36)))))

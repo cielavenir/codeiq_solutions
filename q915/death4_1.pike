@@ -1,0 +1,1 @@
+int main(){int I,J=0;while(++J<9)for(I=0;I<40/J;I++)Stdio.stdout.write(int2char(36+I*J*2));}

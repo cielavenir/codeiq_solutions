@@ -1,0 +1,1 @@
+foreach(J in$[1..8])foreach(I in$[0..40/J])System.Console.Write((36+I*J*2):>char)
