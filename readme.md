@@ -37,3 +37,9 @@
 ### q915
 - 第4回デスマコロシアム
 - <https://codeiq.jp/ace/tbpgr_colosseum_manager/q915>
+
+### q959-q961
+- 牽牛 彦星 牛を飼う
+- <https://codeiq.jp/ace/ozy_hikoboshi/q959>
+- 牽牛 彦星 牛をもっと飼う
+- <https://codeiq.jp/ace/ozy_hikoboshi/q961>
