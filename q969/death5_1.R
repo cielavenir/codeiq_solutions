@@ -1,0 +1,1 @@
+for(i in 1:50)cat(ifelse(i%%15,ifelse(i%%5,ifelse(i%%3,i,'fizz'),'buzz'),'FIZZBUZZ'))

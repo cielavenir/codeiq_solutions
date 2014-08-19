@@ -1,0 +1,1 @@
+class Main{public static void main(String[]z){for(int i=0;++i<51;)System.out.print(i%15>0?i%5>0?i%3>0?i:"fizz":"buzz":"FIZZBUZZ");}}

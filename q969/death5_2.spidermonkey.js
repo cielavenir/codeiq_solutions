@@ -1,0 +1,1 @@
+for(R=i='';++i<51;)R+=i%5?i%3?i:'fizz':i%3?'buzz':'FIZZBUZZ';print(R)

@@ -1,0 +1,1 @@
+perl -e'for$i(1..50){print $i%15?$i%5?$i%3?$i:"fizz":"buzz":"FIZZBUZZ"}'

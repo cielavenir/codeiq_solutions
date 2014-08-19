@@ -1,0 +1,1 @@
+for i in 65..122 do printf"%c"(char i)

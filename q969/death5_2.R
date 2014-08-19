@@ -1,0 +1,1 @@
+for(i in 1:50)cat(if(i%%15)if(i%%5)if(i%%3)i else'fizz'else'buzz'else'FIZZBUZZ')

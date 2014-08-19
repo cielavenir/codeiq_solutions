@@ -1,0 +1,1 @@
+for I in 1..8 do[36..I*2..117]|>Seq.iter(char>>printf"%c")

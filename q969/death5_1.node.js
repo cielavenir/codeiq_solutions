@@ -1,0 +1,1 @@
+for(R=i='';++i<51;)R+=i%15?i%5?i%3?i:'fizz':'buzz':'FIZZBUZZ';console.log(R)

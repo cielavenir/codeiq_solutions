@@ -1,0 +1,1 @@
+END{for(;++i<51;)printf i%5?i%3?i:"fizz":i%3?"buzz":"FIZZBUZZ"}

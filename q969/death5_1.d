@@ -1,0 +1,1 @@
+import std.stdio,std.conv;void main(){foreach(i;1..51)write(i%15?i%5?i%3?to!string(i):"fizz":"buzz":"FIZZBUZZ");}

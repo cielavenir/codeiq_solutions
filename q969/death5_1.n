@@ -1,0 +1,1 @@
+foreach(i in$[1..50])System.Console.Write(if(i%15>0)if(i%5>0)if(i%3>0)i.ToString()else"fizz"else"buzz"else"FIZZBUZZ")

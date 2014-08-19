@@ -1,0 +1,1 @@
+<?for($i=0;++$i<51;)echo$i%15?$i%5?$i%3?$i:fizz:buzz:FIZZBUZZ;

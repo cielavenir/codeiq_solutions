@@ -1,1 +1,1 @@
-BEGIN{for(i=64;++i<=122;)printf("%c",i)}
+END{for(i=64;++i<=122;)printf"%c",i}

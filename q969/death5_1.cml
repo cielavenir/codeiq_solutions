@@ -1,0 +1,1 @@
+for i=1 to 50 do print_string(if i mod 15==0 then "FIZZBUZZ" else if i mod 3==0 then "fizz" else if i mod 5==0 then "buzz" else string_of_int(i)) done;;

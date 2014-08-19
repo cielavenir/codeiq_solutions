@@ -1,0 +1,1 @@
+[65..122]|>Seq.iter(char>>printf"%c")

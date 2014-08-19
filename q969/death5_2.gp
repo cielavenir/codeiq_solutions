@@ -1,0 +1,1 @@
+for(i=1,50,print1(if(i%5,if(i%3,Str(i),"fizz"),if(i%3,"buzz","FIZZBUZZ"))))

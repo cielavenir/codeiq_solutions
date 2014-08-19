@@ -1,0 +1,1 @@
+for 1..50 -> $i {print $i%15??$i%5??$i%3??$i!!"fizz"!!"buzz"!!"FIZZBUZZ"}

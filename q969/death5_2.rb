@@ -1,0 +1,1 @@
+1.step(50){|i|print i%5>0?i%3>0?i:'fizz':i%3>0?'buzz':'FIZZBUZZ'}

@@ -1,0 +1,1 @@
+print$_%15?$_%5?$_%3?$_:fizz:buzz:FIZZBUZZ for 1..50

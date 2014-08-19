@@ -1,0 +1,1 @@
+int main(){for(int i=0;++i<51;)Stdio.stdout.write(i%5?i%3?sprintf("%d",i):"fizz":i%3?"buzz":"FIZZBUZZ");}

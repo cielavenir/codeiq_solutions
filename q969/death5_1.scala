@@ -1,0 +1,1 @@
+object Main extends App{for(i<-1 to 50)print(if(i%15>0)if(i%5>0)if(i%3>0)i else"fizz"else"buzz"else"FIZZBUZZ")}

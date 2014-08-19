@@ -43,3 +43,7 @@
 - <https://codeiq.jp/ace/ozy_hikoboshi/q959>
 - 牽牛 彦星 牛をもっと飼う
 - <https://codeiq.jp/ace/ozy_hikoboshi/q961>
+
+### q969
+- 第5回デスマコロシアム
+- <https://codeiq.jp/ace/tbpgr_colosseum_manager/q969>

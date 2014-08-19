@@ -1,0 +1,1 @@
+class Z{static void Main(){for(int i=0;++i<51;)System.Console.Write(i%15>0?i%5>0?i%3>0?i.ToString():"fizz":"buzz":"FIZZBUZZ");}}

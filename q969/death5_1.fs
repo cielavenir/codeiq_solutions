@@ -1,0 +1,1 @@
+List.map(fun i->System.Console.Write(if i%15=0 then "FIZZBUZZ" elif i%3=0 then "fizz" elif i%5=0 then "buzz" else i.ToString()))[1..50];;

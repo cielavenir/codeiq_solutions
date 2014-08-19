@@ -1,0 +1,1 @@
+for I in 1..8 do for J in 36..I*2..117 do printf"%c"(char J)

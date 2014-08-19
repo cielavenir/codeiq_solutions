@@ -1,0 +1,60 @@
+DO ,1 <- #57
+PLEASE DO ,1 SUB #1 <- #126
+PLEASE DO ,1 SUB #2 <- #64
+PLEASE DO ,1 SUB #3 <- #128
+PLEASE DO ,1 SUB #4 <- #160
+PLEASE DO ,1 SUB #5 <- #128
+PLEASE DO ,1 SUB #6 <- #64
+PLEASE DO ,1 SUB #7 <- #128
+PLEASE DO ,1 SUB #8 <- #208
+PLEASE DO ,1 SUB #9 <- #128
+PLEASE DO ,1 SUB #10 <- #64
+PLEASE DO ,1 SUB #11 <- #128
+PLEASE DO ,1 SUB #12 <- #160
+PLEASE DO ,1 SUB #13 <- #128
+PLEASE DO ,1 SUB #14 <- #64
+DO ,1 SUB #15 <- #128
+DO ,1 SUB #16 <- #232
+DO ,1 SUB #17 <- #128
+DO ,1 SUB #18 <- #64
+DO ,1 SUB #19 <- #128
+DO ,1 SUB #20 <- #160
+DO ,1 SUB #21 <- #128
+DO ,1 SUB #22 <- #64
+DO ,1 SUB #23 <- #128
+DO ,1 SUB #24 <- #208
+DO ,1 SUB #25 <- #128
+DO ,1 SUB #26 <- #64
+DO ,1 SUB #27 <- #128
+DO ,1 SUB #28 <- #32
+DO ,1 SUB #29 <- #64
+DO ,1 SUB #30 <- #128
+DO ,1 SUB #31 <- #244
+DO ,1 SUB #32 <- #128
+DO ,1 SUB #33 <- #64
+DO ,1 SUB #34 <- #128
+DO ,1 SUB #35 <- #160
+DO ,1 SUB #36 <- #128
+DO ,1 SUB #37 <- #64
+DO ,1 SUB #38 <- #128
+DO ,1 SUB #39 <- #208
+DO ,1 SUB #40 <- #128
+DO ,1 SUB #41 <- #64
+DO ,1 SUB #42 <- #128
+DO ,1 SUB #43 <- #160
+DO ,1 SUB #44 <- #128
+DO ,1 SUB #45 <- #64
+DO ,1 SUB #46 <- #128
+DO ,1 SUB #47 <- #232
+DO ,1 SUB #48 <- #128
+DO ,1 SUB #49 <- #64
+DO ,1 SUB #50 <- #128
+DO ,1 SUB #51 <- #160
+DO ,1 SUB #52 <- #128
+DO ,1 SUB #53 <- #64
+DO ,1 SUB #54 <- #128
+DO ,1 SUB #55 <- #208
+DO ,1 SUB #56 <- #128
+DO ,1 SUB #57 <- #64
+PLEASE READ OUT ,1
+PLEASE GIVE UP

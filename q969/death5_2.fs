@@ -1,0 +1,1 @@
+for i in 1..50 do printf"%s"(if i%15=0 then"FIZZBUZZ"elif i%3=0 then"fizz"elif i%5=0 then"buzz"else i.ToString())

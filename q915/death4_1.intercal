@@ -1,0 +1,114 @@
+DO ,1 <- #111
+PLEASE DO ,1 SUB #1 <- #220
+PLEASE DO ,1 SUB #2 <- #192
+PLEASE DO ,1 SUB #3 <- #80
+PLEASE DO ,1 SUB #4 <- #192
+PLEASE DO ,1 SUB #5 <- #32
+PLEASE DO ,1 SUB #6 <- #192
+PLEASE DO ,1 SUB #7 <- #104
+PLEASE DO ,1 SUB #8 <- #192
+PLEASE DO ,1 SUB #9 <- #32
+PLEASE DO ,1 SUB #10 <- #192
+PLEASE DO ,1 SUB #11 <- #80
+PLEASE DO ,1 SUB #12 <- #192
+PLEASE DO ,1 SUB #13 <- #32
+PLEASE DO ,1 SUB #14 <- #192
+PLEASE DO ,1 SUB #15 <- #122
+PLEASE DO ,1 SUB #16 <- #192
+PLEASE DO ,1 SUB #17 <- #32
+PLEASE DO ,1 SUB #18 <- #192
+PLEASE DO ,1 SUB #19 <- #80
+PLEASE DO ,1 SUB #20 <- #192
+PLEASE DO ,1 SUB #21 <- #32
+PLEASE DO ,1 SUB #22 <- #192
+PLEASE DO ,1 SUB #23 <- #104
+PLEASE DO ,1 SUB #24 <- #192
+PLEASE DO ,1 SUB #25 <- #32
+PLEASE DO ,1 SUB #26 <- #192
+PLEASE DO ,1 SUB #27 <- #80
+DO ,1 SUB #28 <- #192
+DO ,1 SUB #29 <- #224
+DO ,1 SUB #30 <- #116
+DO ,1 SUB #31 <- #192
+DO ,1 SUB #32 <- #32
+DO ,1 SUB #33 <- #192
+DO ,1 SUB #34 <- #80
+DO ,1 SUB #35 <- #192
+DO ,1 SUB #36 <- #32
+DO ,1 SUB #37 <- #192
+DO ,1 SUB #38 <- #104
+DO ,1 SUB #39 <- #192
+DO ,1 SUB #40 <- #32
+DO ,1 SUB #41 <- #10
+DO ,1 SUB #42 <- #16
+DO ,1 SUB #43 <- #224
+DO ,1 SUB #44 <- #40
+DO ,1 SUB #45 <- #224
+DO ,1 SUB #46 <- #16
+DO ,1 SUB #47 <- #224
+DO ,1 SUB #48 <- #58
+DO ,1 SUB #49 <- #224
+DO ,1 SUB #50 <- #16
+DO ,1 SUB #51 <- #224
+DO ,1 SUB #52 <- #40
+DO ,1 SUB #53 <- #224
+DO ,1 SUB #54 <- #16
+DO ,1 SUB #55 <- #20
+DO ,1 SUB #56 <- #224
+DO ,1 SUB #57 <- #16
+DO ,1 SUB #58 <- #224
+DO ,1 SUB #59 <- #40
+DO ,1 SUB #60 <- #224
+DO ,1 SUB #61 <- #10
+DO ,1 SUB #62 <- #208
+DO ,1 SUB #63 <- #72
+DO ,1 SUB #64 <- #160
+DO ,1 SUB #65 <- #48
+DO ,1 SUB #66 <- #250
+DO ,1 SUB #67 <- #48
+DO ,1 SUB #68 <- #160
+DO ,1 SUB #69 <- #72
+DO ,1 SUB #70 <- #208
+DO ,1 SUB #71 <- #84
+DO ,1 SUB #72 <- #160
+DO ,1 SUB #73 <- #48
+DO ,1 SUB #74 <- #232
+DO ,1 SUB #75 <- #42
+DO ,1 SUB #76 <- #240
+DO ,1 SUB #77 <- #8
+DO ,1 SUB #78 <- #240
+DO ,1 SUB #79 <- #26
+DO ,1 SUB #80 <- #240
+DO ,1 SUB #81 <- #8
+DO ,1 SUB #82 <- #4
+DO ,1 SUB #83 <- #240
+DO ,1 SUB #84 <- #8
+DO ,1 SUB #85 <- #10
+DO ,1 SUB #86 <- #176
+DO ,1 SUB #87 <- #88
+DO ,1 SUB #88 <- #218
+DO ,1 SUB #89 <- #16
+DO ,1 SUB #90 <- #200
+DO ,1 SUB #91 <- #100
+DO ,1 SUB #92 <- #176
+DO ,1 SUB #93 <- #40
+DO ,1 SUB #94 <- #10
+DO ,1 SUB #95 <- #24
+DO ,1 SUB #96 <- #208
+DO ,1 SUB #97 <- #42
+DO ,1 SUB #98 <- #232
+DO ,1 SUB #99 <- #36
+DO ,1 SUB #100 <- #208
+DO ,1 SUB #101 <- #18
+DO ,1 SUB #102 <- #216
+DO ,1 SUB #103 <- #74
+DO ,1 SUB #104 <- #144
+DO ,1 SUB #105 <- #28
+DO ,1 SUB #106 <- #50
+DO ,1 SUB #107 <- #248
+DO ,1 SUB #108 <- #10
+DO ,1 SUB #109 <- #248
+DO ,1 SUB #110 <- #4
+DO ,1 SUB #111 <- #248
+PLEASE READ OUT ,1
+PLEASE GIVE UP

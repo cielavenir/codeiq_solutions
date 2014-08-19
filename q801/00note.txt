@@ -1,0 +1,10 @@
+http://twitter.com/cielavenir/status/451322942970818560
+例えば藍沢智夏さんはA(da)-C(ommon Lisp)となっていますが、
+このうち1つの言語で正解すればバッジ獲得ではなく、
+正解となるある特定の言語を当てなければならないと勘違いしていました。
+そのためものすごい採点負荷をかけてしまいました。お詫び申し上げます。
+
+https://twitter.com/cielavenir/status/481622243697389568
+#CodeIQ ガールフレンド：nasm/brainf/intercal/wsを追加。
+ついに(日本語がおかしいF#とそもそも出力できないUnlambda以外)
+全言語で答案を作成することが出来ました！

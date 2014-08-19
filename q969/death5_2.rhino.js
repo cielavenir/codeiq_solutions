@@ -1,0 +1,1 @@
+for(i=0;++i<51;)java.lang.System.out.print(i%5?i%3?java.lang.Integer.valueOf(i):'fizz':i%3?'buzz':'FIZZBUZZ')

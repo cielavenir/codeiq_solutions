@@ -1,0 +1,1 @@
+main=putStr$concatMap(\i->if(mod i 5)>0 then if(mod i 3)>0then show$i else"fizz"else if(mod i 3)>0 then"buzz"else"FIZZBUZZ")[1..50]

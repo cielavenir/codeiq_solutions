@@ -1,0 +1,1 @@
+for i in 1..50:write(stdout,if i mod 5>0:if i mod 3>0:$i else:"fizz"elif i mod 3>0:"buzz"else:"FIZZBUZZ")

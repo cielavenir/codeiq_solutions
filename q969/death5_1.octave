@@ -1,0 +1,11 @@
+for i=1:50
+if rem(i,15)==0
+puts("FIZZBUZZ");
+elseif rem(i,3)==0
+puts("fizz");
+elseif rem(i,5)==0
+puts("buzz");
+else
+puts(num2str(i));
+endif
+endfor

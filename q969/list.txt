@@ -1,6 +1,5 @@
 Ada
 Assembler (gcc)
-Assembler (nasm)
 AWK (gawk)
 AWK (mawk)
 Bash

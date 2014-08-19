@@ -1,1 +1,1 @@
-65 to:122 do:[:i|Transcript show:i asCharacter asString].
+65 to:122 do:[:i|Transcript show:i asCharacter asString]

@@ -1,2 +1,1 @@
-<?php
-for($i=65;$i<=122;$i++)echo chr($i);
+<?for($i=64;++$i<=122;)echo chr($i);

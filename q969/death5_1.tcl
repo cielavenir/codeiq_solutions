@@ -1,0 +1,1 @@
+for {set i 1} {$i < 51} {incr i} {puts -nonewline [expr $i%15 ? $i%5 ? $i%3 ? $i : "{fizz}" : "{buzz}" : "{FIZZBUZZ}"]}
