@@ -1,1 +1,1 @@
-for i in[1:51]:print(i%15?i%5?i%3?i:'fizz':'buzz':'FIZZBUZZ')
+for i in[1:51]:>>i%15?i%5?i%3?i:'fizz':'buzz':'FIZZBUZZ'

@@ -1,1 +1,1 @@
-65.upto(122){print(it as char)}
+65.upto(122){print it as char}

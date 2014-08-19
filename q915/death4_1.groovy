@@ -1,1 +1,1 @@
-1.upto(8){J->for(I=36;I<117;I+=J*2){print(I as char)}}
+1.upto(8){J->for(I=36;I<117;I+=J*2){print I as char}}

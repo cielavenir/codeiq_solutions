@@ -1,1 +1,1 @@
-1.upto(50){print(it%5?it%3?it:'fizz':it%3?'buzz':'FIZZBUZZ')}
+1.upto(50){print it%5?it%3?it:'fizz':it%3?'buzz':'FIZZBUZZ'}
