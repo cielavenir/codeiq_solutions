@@ -1,1 +1,1 @@
-for i in[0:26]:for e in strSplit("aAあアアあAa"):print(chr(ord(e)+i))
+for i in[0:26]:for e in strSplit("aAあアアあAa"):>>chr(ord(e)+i)

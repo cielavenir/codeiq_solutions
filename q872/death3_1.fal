@@ -1,1 +1,1 @@
-for i in[65:123]:print(chr(i))
+for i in[65:123]:>>chr(i)

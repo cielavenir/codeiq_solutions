@@ -1,1 +1,1 @@
-for J in[1:9]:for I in[0:40/J+1]:print(chr(36+I*J*2))
+for J in[1:9]:for I in[0:40/J+1]:>>chr(36+I*J*2)
