@@ -33,6 +33,7 @@ Nimrod
 Node.js
 Ocaml
 Octave
+Oz
 PARI/GP
 Pascal (fpc)
 Pascal (gpc)
