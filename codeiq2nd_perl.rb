@@ -1,7 +1,8 @@
 #!/usr/bin/ruby
 #coding:utf-8
 
-STR='(?{print"'+"CodeIQ 2nd Anniversary!\n"+'"})'
+S=STDIN.tty? ? "CodeIQ 2nd Anniversary!\n" : STDIN.read
+STR='(?{print"'+S+'"})'
 a=STR.bytes
 b=a.map{|e|
 	0x60 <= e ? '@' :

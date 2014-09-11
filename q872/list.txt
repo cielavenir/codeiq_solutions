@@ -40,6 +40,8 @@ Perl
 Perl 6
 PHP
 Pike
+Prolog (gnu)
+Prolog (swi)
 Python
 Python 3
 R

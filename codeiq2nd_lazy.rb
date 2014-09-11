@@ -21,7 +21,7 @@ def compile_codepoints(a)
 	}
 end
 
-STR="CodeIQ ２周年！\n"
+STR=STDIN.tty? ? "CodeIQ ２周年！\n" : STDIN.read
 
 puts <<EOM
 (load "../lazier.scm")

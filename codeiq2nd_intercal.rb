@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 #coding:utf-8
 
-STR="CodeIQ ２周年！\n"
+STR=STDIN.tty? ? "CodeIQ ２周年！\n" : STDIN.read
 last=0
 siz=STR.bytes.to_a.size
 please=(siz+3)/4-2
@@ -18,7 +18,7 @@ STR.each_byte.with_index{|e,i|
 	puts "DO ,1 SUB ##{i+1} <- ##{c&0xff}"
 }
 puts 'PLEASE READ OUT ,1'
-puts 'PLEASE GIVE UP'
+print 'PLEASE GIVE UP'
 
 __END__
 [cesspool.c]

@@ -1,2 +1,2 @@
-main :-	format("ガールフレンドめっちゃほしい！\n"),halt.
-:- main.
+main :- write('ガールフレンドめっちゃほしい！'), nl, halt.
+:- initialization(main).

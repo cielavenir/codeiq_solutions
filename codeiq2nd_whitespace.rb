@@ -11,7 +11,7 @@ def gen_number(n)
 	(n<0 ? "\t" : ' ')+gen_label(n.abs)
 end
 
-STR="CodeIQ ２周年！\n"
+STR=STDIN.tty? ? "CodeIQ ２周年！\n" : STDIN.read
 STR.each_byte{|e|
 	c = e
 	print '  '+gen_number(c)
