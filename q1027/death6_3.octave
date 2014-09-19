@@ -1,0 +1,1 @@
+printf('%d:',primes(995));disp('997')

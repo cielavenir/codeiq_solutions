@@ -1,0 +1,1 @@
+END{for(i=1;++i<999;){for(j=2;i%j++;);if(j>i)printf(i>2?":%d":"%d",i)}}

@@ -1,0 +1,1 @@
+void main(String[]z){for(int i=1,j;++i<999;System.out.printf(j<i?"":i>2?":%d":"%d",i))for(j=1;i%++j>0;);}

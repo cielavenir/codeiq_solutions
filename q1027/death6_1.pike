@@ -1,0 +1,1 @@
+int main(){for(int i=1,j;++i<999;j>i&&Stdio.stdout.printf(i>2?":%d":"%d",i))for(j=2;i%j++;);}

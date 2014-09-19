@@ -1,0 +1,1 @@
+disp(substr(sprintf(':%d',primes(999)),2))

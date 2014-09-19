@@ -1,0 +1,5 @@
+for i in[2:999]
+j=2
+while i%j++:
+if j>i:>>(i>2?':':'')+i
+end

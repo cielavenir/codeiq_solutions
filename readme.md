@@ -51,3 +51,7 @@
 ### q1025
 - TSVファイルをLTSVに変換しよう
 - <https://codeiq.jp/ace/tbpgr_badge/q1025>
+
+### q1027
+- 第6回デスマコロシアム
+- <https://codeiq.jp/ace/tbpgr_colosseum_manager/q1027>

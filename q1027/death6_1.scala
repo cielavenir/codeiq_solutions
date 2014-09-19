@@ -1,0 +1,1 @@
+object Main extends App{print((2 to 999)filter(i=>(2 to i-1)forall(j=>i%j>0))mkString(":"))}

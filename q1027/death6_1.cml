@@ -1,0 +1,6 @@
+open Printf;;
+let rec r a b=
+ if a>=b then[]
+ else a::r (a+1) b;;
+printf"2";
+for i=3 to 999 do if List.for_all(fun j->i mod j>0)(r 2 i) then printf ":%d" i done

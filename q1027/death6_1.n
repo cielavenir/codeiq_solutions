@@ -1,0 +1,1 @@
+System.Console.Write(2);foreach(i in$[3..999])when(Nemerle.Collections.List.ForAll($[2..i-1],fun(j){i%j>0}))System.Console.Write(":"+i.ToString())

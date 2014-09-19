@@ -1,0 +1,5 @@
+link factors
+procedure main()
+writes(i:=2)
+while i<997 do{writes(":"||(i:=nxtprime(i)))}
+end

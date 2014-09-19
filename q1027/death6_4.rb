@@ -1,0 +1,1 @@
+require'prime';$><<Prime.take(168)*?:

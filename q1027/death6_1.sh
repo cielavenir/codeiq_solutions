@@ -1,0 +1,1 @@
+ruby -rprime -e'$><<Prime.take(168)*?:'

@@ -1,0 +1,1 @@
+printf"2";for i in 3..999 do if List.forall(fun j->i%j>0)[2..i-1]then printf":%d"i

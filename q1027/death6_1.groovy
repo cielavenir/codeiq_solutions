@@ -1,0 +1,1 @@
+print((2..999).findAll{i->i<3||[*2..i-1].every{i%it}}.join(':'))
