@@ -1,1 +1,1 @@
-class Main{public static void main(String[]z){for(int i=1,j;++i<999;System.out.printf(j<i?"":i>2?":"+i:""+i))for(j=1;i%++j>0;);}}
+class Main{public static void main(String[]z){for(int i=1,j;++i<999;System.out.print(j<i?"":i>2?":"+i:i))for(j=1;i%++j>0;);}}
