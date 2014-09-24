@@ -55,3 +55,10 @@
 ### q1027
 - 第6回デスマコロシアム
 - <https://codeiq.jp/ace/tbpgr_colosseum_manager/q1027>
+
+### q1037-q1038
+- yieldのお勉強 Lv.99 ( **Ruby/Python/C#/Go/PHP/VB.Net** )
+- <https://codeiq.jp/ace/antimon2/q1037>
+- <https://codeiq.jp/ace/antimon2/q1038>
+  - 想定解は導けなかったのが残念
+  - JavaScriptは標準化されてからやるかも
