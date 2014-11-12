@@ -1,1 +1,1 @@
-(loop for i from 65 to 122 collect (princ (code-char i)))
+(loop for i from 65 to 122 do (princ (code-char i)))

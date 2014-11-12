@@ -1,1 +1,1 @@
-List.map(fun J->List.map(fun I->System.Console.Write(System.Convert.ToChar(36+I*J*2)))[0..40/J])[1..8];;
+List.map(fun J->List.map(fun I->System.Console.Write(char(36+I*J*2)))[0..40/J])[1..8];;

@@ -1,1 +1,1 @@
-List.map(fun i->System.Console.Write(System.Convert.ToChar(i+0)))[65..122];;
+List.map(fun i->System.Console.Write(char i))[65..122];;

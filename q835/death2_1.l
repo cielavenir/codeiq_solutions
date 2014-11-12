@@ -1,1 +1,1 @@
-(loop for i to 25 collect (princ (map 'string #'(lambda (x) (code-char (+ x i))) '(97 65 12354 12450 12450 12354 65 97))))
+(loop for i to 25 do (princ (map 'string #'(lambda (x) (code-char (+ x i))) '(97 65 12354 12450 12450 12354 65 97))))
