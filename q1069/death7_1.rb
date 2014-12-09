@@ -1,0 +1,1 @@
+'deathma colosseum'.bytes{|b|$><<?>+?+*b+?.}

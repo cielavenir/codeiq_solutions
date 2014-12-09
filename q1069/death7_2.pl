@@ -1,0 +1,1 @@
+$_="deathma colosseum";s/./">"."+"x ord($&)."."/ge;print

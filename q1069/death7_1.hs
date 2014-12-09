@@ -1,0 +1,1 @@
+main=putStr$concatMap(\i->">"++(replicate(fromEnum i)'+')++".")"deathma colosseum"

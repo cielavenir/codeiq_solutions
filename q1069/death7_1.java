@@ -1,0 +1,1 @@
+class Main{public static void main(String[]z){for(char c:"deathma colosseum".toCharArray()){System.out.print(">"+new String(new char[c]).replace("\0","+")+".");}}}

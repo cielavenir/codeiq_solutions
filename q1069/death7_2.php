@@ -1,0 +1,1 @@
+<?for($i=17;$i--;)echo'>'.str_repeat('+',ord('muessoloc amhtaed'[$i])).'.';

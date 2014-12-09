@@ -14,8 +14,10 @@ STR.each_byte.with_index{|e,i|
 	last2 = c
 	c = (last-c)&0xff
 	last = last2
-	print 'PLEASE ' if i<=please
-	puts "DO ,1 SUB ##{i+1} <- ##{c&0xff}"
+	if c!=0
+		print 'PLEASE ' if i<=please
+		puts "DO ,1 SUB ##{i+1} <- ##{c&0xff}"
+	end
 }
 puts 'PLEASE READ OUT ,1'
 print 'PLEASE GIVE UP'

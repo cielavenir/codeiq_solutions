@@ -1,0 +1,1 @@
+procedure main();every writes(">"||repl("+",ord(!"deathma colosseum"))||".");end

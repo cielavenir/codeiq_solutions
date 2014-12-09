@@ -1,0 +1,1 @@
+echo deathma colosseum|perl -pe's/./">"."+"x ord($&)."."/ge'

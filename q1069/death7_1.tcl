@@ -1,0 +1,1 @@
+foreach e {100 101 97 116 104 109 97 32 99 111 108 111 115 115 101 117 109} {puts -nonewline [join [concat ">" [string repeat "+" $e] "."] ""]}

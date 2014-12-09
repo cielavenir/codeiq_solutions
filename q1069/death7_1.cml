@@ -1,0 +1,2 @@
+open Printf;;
+for i=0 to 16 do printf ">%s." (String.make (Char.code "deathma colosseum".[i]) '+') done;;

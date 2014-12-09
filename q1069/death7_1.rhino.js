@@ -1,0 +1,1 @@
+for(i=-1;++i<17;)java.lang.System.out.print('>'+Array('deathma colosseum'.charCodeAt(i)+1).join('+')+'.')

@@ -1,0 +1,1 @@
+for c in"deathma colosseum"do printf">%s."(String.replicate(int c)"+")

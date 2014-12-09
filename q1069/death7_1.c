@@ -1,0 +1,1 @@
+char s[]="deathma colosseum",*p=s;main(){for(;*p;printf("."),++p)for(printf(">");*p;--*p)printf("+");}

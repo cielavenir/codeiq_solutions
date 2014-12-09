@@ -1,0 +1,1 @@
+(loop for c across "deathma colosseum" do (format t ">~a." (make-string (char-code c) :initial-element #\+)))

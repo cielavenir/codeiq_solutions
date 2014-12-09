@@ -1,0 +1,1 @@
+cat(paste(sapply(utf8ToInt('deathma colosseum'),function(e)paste('>',paste(rep('+',e),collapse=''),'.',sep='')),collapse=''))

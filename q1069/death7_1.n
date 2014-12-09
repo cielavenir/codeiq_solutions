@@ -1,0 +1,1 @@
+foreach(c in"deathma colosseum")System.Console.Write(">"+"".PadLeft(c:>int,'+')+".")

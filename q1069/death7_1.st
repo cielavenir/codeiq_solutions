@@ -1,0 +1,1 @@
+('deathma colosseum' asArray) do:[:c|Transcript show:('>',(String new:(c asInteger) withAll:$+),'.')]

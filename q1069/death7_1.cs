@@ -1,0 +1,1 @@
+class Z{static void Main(){foreach(var c in "deathma colosseum"){System.Console.Write(">"+"".PadLeft(c,'+')+".");}}}

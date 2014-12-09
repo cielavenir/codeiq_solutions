@@ -1,0 +1,1 @@
+print'>'.'+'x ord.'.'for('deathma colosseum'=~/./g)

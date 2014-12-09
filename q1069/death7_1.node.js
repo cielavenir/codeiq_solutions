@@ -1,0 +1,1 @@
+R=[];for(i=-1;++i<17;)R.push('>'+Array('deathma colosseum'.charCodeAt(i)+1).join('+')+'.');console.log(R.join(''))

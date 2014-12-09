@@ -1,0 +1,1 @@
+"deathma colosseum".each{print">"+"+"*((it as char)+0)+"."}

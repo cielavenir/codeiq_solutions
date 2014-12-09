@@ -1,0 +1,3 @@
+for i in[0:17]
+>>">"+"+"*ord("deathma colosseum"[i])+"."
+end

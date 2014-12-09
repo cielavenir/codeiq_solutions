@@ -1,0 +1,1 @@
+END{split("deathma colosseum",s,"");for(;++x<256;)c[sprintf("%c",x)]=x;for(;++i<18;printf("."))for(printf(">"),j=0;j<c[s[i]];j++)printf("+");}

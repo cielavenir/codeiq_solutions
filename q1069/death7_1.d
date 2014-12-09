@@ -1,0 +1,1 @@
+import std.stdio,std.array;void main(){foreach(char c;"deathma colosseum")write(">","+".replicate(c),".");}
