@@ -1,0 +1,1 @@
+for i=0:24 disp(strcat(repmat("A",[1,i]),char(66+i),repmat("A",[1,24-i])))end

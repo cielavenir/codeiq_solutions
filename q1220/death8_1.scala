@@ -1,0 +1,1 @@
+object Main extends App{(0 to 24)map(i=>println("A"*i+(i+66).toChar+"A"*(24-i)))}

@@ -1,0 +1,1 @@
+25.times{println"A"*it+(66+it as char)+"A"*(24-it)}

@@ -1,0 +1,1 @@
+(loop for i from 0 to 24 do (format t "~a~a~a~%" (make-string i :initial-element #\A) (code-char (+ 66 i)) (make-string (- 24 i) :initial-element #\A)))

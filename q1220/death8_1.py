@@ -1,0 +1,1 @@
+for i in range(25):print('A'*i+chr(i+66)+'A'*(24-i))

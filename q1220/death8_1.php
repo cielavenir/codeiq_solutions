@@ -1,0 +1,1 @@
+<?for(;$i<25;)echo str_repeat('A',$i).chr($i+66).str_repeat('A',24-$i++)."\n";

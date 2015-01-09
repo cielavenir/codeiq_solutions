@@ -1,0 +1,1 @@
+0 to:24 do:[:i|Transcript cr;show:((String new:i withAll:$A),(66+i) asCharacter asString,(String new:24-i withAll:$A))]

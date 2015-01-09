@@ -1,0 +1,1 @@
+procedure main();every i:=0to 24do{write(repl("A",i)||char(66+i)||repl("A",24-i))};end

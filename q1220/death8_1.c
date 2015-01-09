@@ -1,0 +1,1 @@
+char s[25];main(i){for(i=-1;++i<25;)s[i]=65;for(i=-1;++i<25;)s[i]+=i+1,puts(s),s[i]-=i+1;}

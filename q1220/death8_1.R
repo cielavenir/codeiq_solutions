@@ -1,0 +1,1 @@
+cat(paste(sapply(0:24,function(i)paste(paste(rep('A',i),collapse=''),intToUtf8(66+i),paste(rep('A',24-i),collapse=''),"\n",sep='')),collapse=''))

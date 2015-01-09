@@ -1,0 +1,1 @@
+foreach(i in$[0..24])System.Console.WriteLine("".PadLeft(i,'A')+((66+i):>char).ToString()+"".PadLeft(24-i,'A'))

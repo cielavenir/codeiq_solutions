@@ -1,0 +1,1 @@
+import std.stdio;char s[25];void main(){int i=-1;for(;++i<25;)s[i]=65;for(i=-1;++i<25;)s[i]+=i+1,writeln(s),s[i]-=i+1;}

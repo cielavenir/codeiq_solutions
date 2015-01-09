@@ -1,0 +1,2 @@
+open Printf;;
+for i=0 to 24 do printf "%s%c%s\n" (String.make i 'A') (Char.chr (66+i)) (String.make (24-i) 'A') done;;

@@ -1,0 +1,1 @@
+for {set i 0} {$i < 25} {incr i} {puts [format "%s%c%s" [string repeat "A" $i] [expr $i+66] [string repeat "A" [expr 24-$i]]]}

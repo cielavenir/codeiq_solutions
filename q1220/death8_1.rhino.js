@@ -1,0 +1,1 @@
+for(i=0;++i<26;)java.lang.System.out.println(Array(i).join('A')+String.fromCharCode(i+65)+Array(26-i).join('A'))

@@ -62,3 +62,11 @@
 - <https://codeiq.jp/ace/antimon2/q1038>
   - 想定解は導けなかったのが残念
   - JavaScriptは標準化されてからやるかも
+
+### q1069
+- 第7回デスマコロシアム
+- <https://codeiq.jp/ace/tbpgr_colosseum_manager/q1069>
+
+### q1220
+- 第8回デスマコロシアム
+- <https://codeiq.jp/ace/tbpgr_colosseum_manager/q1220>

@@ -1,0 +1,1 @@
+int main(){for(int i=0;i<25;)write(sprintf("%s%c%s\n","A"*i,66+i,"A"*(24-i++)));}

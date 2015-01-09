@@ -1,0 +1,1 @@
+class Main{public static void main(String[]z){for(int i=-1;++i<25;)System.out.println(new String(new char[i]).replace("\0","A")+(char)(i+66)+new String(new char[24-i]).replace("\0","A"));}}

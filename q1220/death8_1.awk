@@ -1,0 +1,1 @@
+END{for(i=-1;++i<25;printf("\n")){for(j=-1;++j<i;)printf("A");printf("%c",66+i);for(j=-1;++j<24-i;)printf("A");}}
