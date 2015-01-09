@@ -1,1 +1,1 @@
-for i in 65..122:echo(chr(i))
+for i in 65..122:write(stdout,chr(i))
