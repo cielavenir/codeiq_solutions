@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 function infinite_product($enums){
-	$flags=array_map(function($e){return true;},$enums);
+	$flags=array_map(function($e){return TRUE;},$enums);
 	$arr=array_map(function($e){return [];},$enums);
 	$cnt=0;
 	$iter_end=FALSE;
@@ -10,6 +10,7 @@ function infinite_product($enums){
 		for($i=0;$i<count($enums);$i++){
 			if($flags[$i]){
 				if(!count($arr[$i])){
+					//actually not rewinding; the first iteration is rewind() in PHP.
 					$enums[$i]->rewind();
 				}else{
 					$enums[$i]->next();
