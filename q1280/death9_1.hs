@@ -1,0 +1,1 @@
+main=putStr$map(\i->toEnum (97+mod i 26-(div(8-mod i 8)8)*32))[0..207]

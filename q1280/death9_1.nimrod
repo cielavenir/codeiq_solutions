@@ -1,0 +1,1 @@
+for i in 0..207:write(stdout,chr(97+i mod 26-(8-i mod 8)div 8*32))

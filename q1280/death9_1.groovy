@@ -1,0 +1,1 @@
+208.times{print 97+it%26-(8-it%8).intdiv(8)*32 as char}

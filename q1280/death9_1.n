@@ -1,0 +1,1 @@
+foreach(i in$[0..207])System.Console.Write((97+i%26-(8-i%8)/8*32):>char)

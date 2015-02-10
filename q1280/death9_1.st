@@ -1,0 +1,1 @@
+0 to:207 do:[:i|Transcript show:(97+(i\\26)-(((8-(i\\8))//8)*32)) asCharacter asString]

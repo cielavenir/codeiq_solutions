@@ -1,0 +1,1 @@
+for {set i 0} {$i < 208} {incr i} {puts -nonewline [format %c [expr 97+$i%26-(8-$i%8)/8*32]]}

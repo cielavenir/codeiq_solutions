@@ -1,0 +1,1 @@
+(loop for i from 0 to 207 do (princ (code-char (- (+ 97 (mod i 26)) (* (truncate (- 8 (mod i 8)) 8) 32)))))

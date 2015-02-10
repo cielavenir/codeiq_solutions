@@ -1,0 +1,1 @@
+class Main{public static void main(String[]z){for(int i=0;i<208;i++)System.out.print((char)(97+i%26-(8-i%8)/8*32));}}

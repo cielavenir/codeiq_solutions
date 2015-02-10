@@ -1,0 +1,1 @@
+for(i=0;i<208;)java.lang.System.out.print(String.fromCharCode(i%26+(i++%8?97:65)))

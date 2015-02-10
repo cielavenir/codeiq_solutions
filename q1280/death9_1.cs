@@ -1,0 +1,1 @@
+class Z{static void Main(){for(uint i=0;i<208;)System.Console.Write((char)(97+i%26-~i++%8/7*32));}}

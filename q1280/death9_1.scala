@@ -1,0 +1,1 @@
+object Main extends App{for(i<-0 to 207)print((97+i%26-(8-i%8)/8*32).toChar)}

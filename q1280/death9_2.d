@@ -1,0 +1,1 @@
+import std.c.stdio;void main(){foreach(i;0..208)putchar(i%26+(i%8?97:65));}

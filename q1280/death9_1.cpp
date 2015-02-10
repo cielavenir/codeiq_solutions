@@ -1,0 +1,1 @@
+main(){for(int i=208;i;)putchar((i--%8?122:90)-i%26);}

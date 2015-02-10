@@ -1,0 +1,1 @@
+for i=0:207 printf(char(97+mod(i,26)-(mod(i,8)<1)*32))end

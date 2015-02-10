@@ -69,3 +69,7 @@
 ### q1220
 - 第8回デスマコロシアム
 - <https://codeiq.jp/ace/tbpgr_colosseum_manager/q1220>
+
+### q1280
+- 第9回デスマコロシアム
+- <https://codeiq.jp/ace/tbpgr_colosseum_manager/q1280>

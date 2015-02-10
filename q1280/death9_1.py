@@ -1,0 +1,1 @@
+print(''.join(chr(97+i%26-~i%8/7*32)for i in range(208)))
