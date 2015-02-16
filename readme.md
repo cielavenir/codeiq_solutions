@@ -70,6 +70,10 @@
 - 第8回デスマコロシアム
 - <https://codeiq.jp/ace/tbpgr_colosseum_manager/q1220>
 
+### q1249
+- コードを汚く逆リファクタリング
+- <https://codeiq.jp/ace/tbpgr_badge/q1249>
+
 ### q1280
 - 第9回デスマコロシアム
 - <https://codeiq.jp/ace/tbpgr_colosseum_manager/q1280>
