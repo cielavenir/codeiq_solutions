@@ -1,0 +1,1 @@
+$><<('TTTF'+(a='GT')+'TTT'+(b=a*5+'T'+a*2+'TTGTT')+'TWWTTWG'+b+'FGGWMTMTG'+a+'WG'+a+'TG'+a+'TMWGGW'+a+'TMGGM').chars.map{|e|{'T'=>:tree,'F'=>:fire,'G'=>:gold,'W'=>:water,'M'=>:moon}[e]}*''

@@ -1,0 +1,1 @@
+import std.stdio;void main(){string a="GTGT",b=a~a~"GTT"~a~"TTGTT",c="TTTFGTTTT"~b~"TWWTTWG"~b~"FGGWMTMTGGTWGGTTGGTTMWGGWGTTMGGM";foreach(e;c)write(e=='T'?"tree":e=='F'?"fire":e=='G'?"gold":e=='W'?"water":"moon");}
