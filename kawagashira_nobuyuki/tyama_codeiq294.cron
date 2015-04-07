@@ -1,0 +1,1 @@
+30 23 * * * du -d 1 /home > /var/lib/bak/du-`date +\%Y\%m\%d`.log

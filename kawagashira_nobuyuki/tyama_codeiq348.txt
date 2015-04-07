@@ -1,0 +1,3 @@
+125
+Ruby (Ruby2.0で導入された環境変数RUBY_THREAD_VM_STACK_SIZEに4MB割り当て)
+65533
