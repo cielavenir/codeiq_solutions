@@ -1,0 +1,31 @@
+#if false
+eval("puts '.uretihsia'.reverse;exit;") if "0"; #Ruby
+eval("print reverse('.uretihsia').\$/;exit;"); #Perl
+=begin DATA
+#elif __STDC__
+//C
+char *s=".uretihsia";
+int main(n){if(s[n-1])main(n+1),putchar(s[n-1]);return 0;}
+#elif __PIKE__
+//Pike
+int main(){Stdio.stdout.write(reverse(".uretihsia"));return 0;}
+#elif __MonoCS__
+//Csharp
+using System;
+class iloveyou{
+	static void Main(){
+		var a=".uretihsia".ToCharArray();
+		Array.Reverse(a);
+		Console.WriteLine(new String(a));
+	}
+}
+#else
+//Fsharp
+open System
+let a=".uretihsia".ToCharArray()
+Array.Reverse(a)
+Console.WriteLine(new String(a))
+#endif
+#if false
+=end DATA
+#endif
