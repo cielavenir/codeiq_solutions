@@ -1,0 +1,1 @@
+main(n){scanf("%d",&n);n=n-~n%2&10923;vprintf();}

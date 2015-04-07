@@ -1,0 +1,1 @@
+main(n){printf("%d",~-atoi(gets(&n))&'ݬ'|1);}

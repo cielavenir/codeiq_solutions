@@ -1,0 +1,1 @@
+main(n){gets(&n);printf("%d",~-atoi()&10923|1);}

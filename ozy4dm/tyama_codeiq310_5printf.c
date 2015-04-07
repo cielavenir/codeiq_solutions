@@ -1,0 +1,1 @@
+a[99],i;main(T){for(;*a=T<21;)printf(i<0?i=T++,"1\n":"%d ",a[i]+=a[--i]);}
