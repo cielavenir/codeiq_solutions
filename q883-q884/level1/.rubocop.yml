@@ -1,0 +1,18 @@
+Void:
+  Enabled: false
+SpaceAroundOperators:
+  Enabled: false
+UselessAssignment:
+  Enabled: false
+LiteralInCondition:
+  Enabled: false
+TrailingBlankLines:
+  EnforcedStyle: final_blank_line
+TrailingBlankLines:
+  Enabled: false
+EndOfLine:
+  Enabled: false
+UnusedMethodArgument:
+  Enabled: false
+UnusedBlockArgument:
+  Enabled: false

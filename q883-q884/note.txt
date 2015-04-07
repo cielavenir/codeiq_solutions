@@ -1,0 +1,19 @@
+https://github.com/bbatsov/rubocop/blob/master/config/enabled.yml
+とにらめっこ。あと、
+https://github.com/fortissimo1997/ruby-style-guide/blob/japanese/README.ja.md
+も読んだ。56/48。
+
+一応正統派のコードを載せておきます。
+Answer=$1;->{def A _#あ 
+END{A{[{:A=>%W!!*"",A:$A,}, ]}if(!!あ=_===_)
+	not"#$_#{}#{?A}"%$$or$!.()}end}
+
+・今回文字数判定がバイト単位ではないので、日本語の識別子・コメントを使って警告数を稼いでいます。
+・VariableInterpolationで増殖バグが見つかりましたが、1個につき3文字使うので、警告数が40個を越えると実用的でなくなります。今回は使わない縛りとしました。
+・Answerはclassである必要はないので、$1を代入してごまかします。「Use SCREAMING_SNAKE_CASE for constants」の警告も戴けて一石二鳥。
+・Lv1に限り、2行目のsplatをブロック呼び出しに変更することで2警告稼げます。
+・unless〜else〜endが冗長でしたので削りました。
+・#$:のようなinterpolationを使うことで「3文字につき2つ」警告を稼げてしまうことがわかりました。前言撤回。あとはそれよりレートの低い警告を探して削る作業。。
+・Lv1については、%W!!を$"と改行とタブに置換してもう1個稼げました。
+・Lv2は{a:X,}をタブと[X,]に置換してもう1個稼げました。
+・結果、頭を使わず67/62に到達しました。色々酷いです。

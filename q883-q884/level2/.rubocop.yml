@@ -1,0 +1,36 @@
+EmptyLines:
+  Enabled: false
+EmptyLinesAroundBody:
+  Enabled: false
+IndentationWidth:
+  Enabled: false
+LeadingCommentSpace:
+  Enabled: false
+SpaceAfterComma:
+  Enabled: false
+SpaceAroundOperators:
+  Enabled: false
+SpaceBeforeBlockBraces:
+  Enabled: false
+SpaceInsideBlockBraces:
+  EnforcedStyle: no_space
+SpaceInsideParens:
+  Enabled: false
+Void:
+  Enabled: false
+SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+UselessAssignment:
+  Enabled: false
+LiteralInCondition:
+  Enabled: false
+TrailingBlankLines:
+  EnforcedStyle: final_blank_line
+TrailingBlankLines:
+  Enabled: false
+EndOfLine:
+  Enabled: false
+UnusedMethodArgument:
+  Enabled: false
+UnusedBlockArgument:
+  Enabled: false
