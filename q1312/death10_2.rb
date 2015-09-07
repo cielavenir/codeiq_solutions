@@ -1,1 +1,0 @@
-('TTTF'+(a='GT')+'TTT'+(b=a*5+'T'+a*2+'TTGTT')+'TWWTTWG'+b+'FGGWMTMTG'+a+'WG'+a+'TG'+a+'TMWGGW'+a+'TMGGM').chars{|e|print e=='T'?:tree:e=='F'?:fire:e=='G'?:gold:e=='W'?:water: :moon}
