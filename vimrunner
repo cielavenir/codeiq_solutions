@@ -1,0 +1,2 @@
+#!/usr/bin/env ruby
+system(%Q(vim -X -N -u NONE -i NONE -V1 -e --cmd 'source #{ARGV[0].gsub(' ','\ ')} | qall!'))
