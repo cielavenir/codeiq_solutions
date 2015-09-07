@@ -1,0 +1,99 @@
+#if    false
+;
+  	;
+   	;
+	    ;
+    		;
+	 		;
+	 	 ;
+ ;
+    	 	;
+	 		;
+	 		;
+ ;
+ 	;
+ 	;
+ ;
+			;
+;
+  		;
+   	    	 ;
+	;
+     			 	 	;
+	;
+     				 	 ;
+	
+     				 	 ;
+	;
+  ;
+ ;
+			;
+;
+  	 ;
+   	   		 ;
+	;
+     		 	  	;
+	;
+     				 	 ;
+	;
+     				 	 ;
+	;
+   ;
+    	 	;
+	 		;
+	 	  ;
+;
+ ;
+			;
+;
+  	  ;
+ ;
+    	    	 ;
+	;
+     			 	 	;
+	;
+     				 	 ;
+	;
+     				 	 ;
+	;
+  ;
+  			;
+ ;
+    		  	  ;
+	  	;
+			;
+;
+	;
+eval("(1..100).each{|i|if i%3>0 then print i%5==0?'Buzz':i else print 'Fizz';print 'Buzz' if i%5==0 end};exit") if "0"; #Ruby
+eval("for(\$i=1;\$i<=100;\$i++){if(\$i%3){print(\$i%5?\$i:'Buzz')}else{print(\$i%5?'Fizz':'FizzBuzz')}};exit;"); #Perl
+=begin DATA
+#elif __STDC__
+//C
+int main(i){for(;i<=100;i++)if(i%3)printf(i%5?"%d":"Buzz",i);else{printf("Fizz");if(i%5==0)printf("Buzz");}return 0;}
+#elif __PIKE__
+//Pike
+int main(){for(int i=1;i<=100;i++)if(i%3)Stdio.stdout.write(i%5?(string)i:"Buzz");else{Stdio.stdout.write("Fizz");if(i%5==0)Stdio.stdout.write("Buzz");};return 0;}
+#elif __MonoCS__
+//Csharp
+using System;
+class fizzbuzz{
+	static void Main(){
+		for(int i=1;i<=100;i++)if(i%3==0){
+			Console.Write(i%5==0 ? "FizzBuzz" : "Fizz");
+		}else{
+			Console.Write(i%5==0 ? "Buzz" : i.ToString());
+		}
+	}
+}
+#else
+//Fsharp
+open System
+for i in 1..100 do
+ if i%3=0 then
+  Console.Write(if i%5=0 then "FizzBuzz" else "Fizz")
+ else
+  Console.Write(if i%5=0 then "Buzz" else i.ToString())
+#endif
+#if false
+=end DATA
+#endif

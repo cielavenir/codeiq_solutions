@@ -1,0 +1,19 @@
+#!/usr/bin/bc
+#requires export BC_LINE_LENGTH=2000
+scale=0
+a=0
+b=1
+c=0
+n=read()
+for(;n>0;n--){
+	print a
+	if(n>1){
+		print ","
+	}else{
+		print "\n"
+	}
+	c=a+b
+	a=b
+	b=c
+}
+quit
