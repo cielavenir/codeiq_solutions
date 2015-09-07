@@ -1,0 +1,1 @@
+import std.c.stdio;int i,y,z;void main(){for(;i<610;i++)putchar(++z=="DMNNFLLNJRFTEMKSFJNPIIOKMOJJNPIGQMLFRHPNKGQMLJFKMLKOJKSFKUDLNA"[y]-65&&(y+=z=1)?42:"brainfuck\0"[i%10]);}

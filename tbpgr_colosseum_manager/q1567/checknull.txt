@@ -1,0 +1,3 @@
+Without LF:
+MD5  a720a0c012e0e6adddbeed0f44b4795b
+SHA1 445abf7409b5837b331a6f6d3369f1b82c4acabe
