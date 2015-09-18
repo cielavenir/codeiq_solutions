@@ -13,5 +13,5 @@ while true {
 		if x%i==0 {r+=x/i}
 		i+=1
 	}
-	println(r)
+	print(r)
 }
