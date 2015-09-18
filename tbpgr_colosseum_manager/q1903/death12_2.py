@@ -1,0 +1,1 @@
+print''.join(chr(i%26+97-(2630528<<i/26>>i%26&32))for i in range(572))
