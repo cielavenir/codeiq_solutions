@@ -1,0 +1,19 @@
+using System.Console;
+mutable s:string;
+mutable n,r,i,x,d,k:long;
+s=ReadLine();
+while(s!=null){
+	n=long.Parse(s);
+	when(n>0l){
+		r=0l;
+		i=2l;
+		x=n-1l;
+		while(x>=i){
+			x=n-i*(i-1l)/2l;
+			when(x%i==0)r=r+x/i;
+			i=i+1l;
+		}
+		WriteLine(r);
+	}
+	s=ReadLine();
+}

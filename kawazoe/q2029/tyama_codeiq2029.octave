@@ -1,0 +1,24 @@
+#!/usr/bin/env octave -q
+function solve(n)
+	r=0;
+	i=int64(2);
+	x=n-1;
+	while(x>=i)
+		x=n-i*(i-1)/2;
+		if(mod(x,i)==0)
+			r+=x/i;
+		endif
+		i+=1;
+	endwhile
+	printf("%ld\n",r);
+endfunction
+
+n=int64(input(""));
+if(true)
+	solve(n);
+else
+	while(n>0)
+		solve(n);
+		n=int64(input(""));
+	endwhile
+endif

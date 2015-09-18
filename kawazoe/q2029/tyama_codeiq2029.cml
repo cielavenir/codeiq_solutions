@@ -1,0 +1,21 @@
+#!/usr/bin/ocaml
+
+let rec calc r i n =
+	let x = (Int64.sub n (Int64.div (Int64.mul i (Int64.sub i 1L)) 2L)) in
+	if (Int64.compare x i)>=0 then
+		if (Int64.compare (Int64.rem x i) 0L)==0 then (
+				calc (Int64.add r (Int64.div x i)) (Int64.add i 1L) n
+		) else
+			calc r (Int64.add i 1L) n
+	else
+		r;;
+
+try
+	while true do
+		Scanf.sscanf (read_line ()) "%Ld" (fun n ->
+			if (Int64.compare n 0L)==0 then exit(0) else (
+				print_string (Int64.to_string (calc 0L 2L n));
+				print_string "\n"
+			)
+		)done;
+with End_of_file -> ();;

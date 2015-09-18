@@ -1,0 +1,23 @@
+(de calc (r i n)
+	(let (x (- n (/ (* i (- i 1)) 2)))
+		(if (>= x i)
+			(if (= 0 (% x i))
+				(calc (+ r (/ x i)) (+ i 1) n)
+				(calc r (+ i 1) n)
+			)
+			r
+		)
+	)
+)
+
+(de ma ()
+	(let (n (read))
+		(if (and (not (= n NIL)) (not (= n 0))) (prog
+			(prinl (calc 0 2 n))
+			(ma)
+		))
+	)
+)
+(in NIL
+	(ma)
+)

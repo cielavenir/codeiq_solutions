@@ -1,0 +1,17 @@
+void main(String[]args){
+	java.io.BufferedReader R = new java.io.BufferedReader (new java.io.InputStreamReader (System.in));
+	for(;;){
+		?java.lang.String s=R.readLine();
+		if(s==null)break;
+		long n=Long.parseLong(s);
+		if(n==0)break;
+		long r=0;
+		long i=2;
+		for(;;i++){
+			long x=n-i*(i-1)/2;
+			if(x<i)break;
+			if(x%i==0)r+=x/i;
+		}
+		System.out.println(r);
+	}
+}

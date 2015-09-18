@@ -1,0 +1,16 @@
+#!/work/misc/cmd/icon-v950/bin/icon
+procedure main()
+	local n,r,i,x
+	while n:=read() do{
+		if n==0 then break
+		r:=0
+		i:=2
+		while 1 do{
+			x:=n-i*(i-1)/2
+			if x<i then break
+			if x%i==0 then r:=r+x/i
+			i:=i+1
+		}
+		write(r)
+	}
+end

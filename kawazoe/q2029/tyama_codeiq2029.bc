@@ -1,0 +1,27 @@
+#!/usr/bin/bc
+scale=0
+define solve(n){
+	r=0
+	i=2
+	x=n-1
+	while(x>=i){
+		x=n-i*(i-1)/2
+		if(x%i==0){
+			r+=x/i
+		}
+		i+=1
+	}
+	print r
+	print "\n"
+}
+
+n=read()
+if(1){
+	nil=solve(n)
+}else{
+	while(n>0){
+		nil=solve(n)
+		n=read()
+	}
+}
+quit

@@ -1,0 +1,24 @@
+mysolve(n)={
+	r=0;
+	i=2;
+	x=n-1;
+	while(x>=i,
+		x=n-i*(i-1)\2;
+		if(x%i==0,
+			r+=x\i
+		);
+		i+=1
+	);
+	print(r)
+}
+f()={
+	n=input();
+	if(1,
+		mysolve(n),
+		while(n>0,
+			mysolve(n);
+			n=input()
+		)
+	)
+}
+f()

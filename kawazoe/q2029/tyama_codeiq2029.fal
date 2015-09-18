@@ -1,0 +1,26 @@
+#!/usr/bin/env falcon
+starting=5
+bse=10
+stdin=stdIn()
+while true
+	if stdin.eof()
+		break
+	end
+	n=int(stdin.grabLine())
+	if n==0
+		break
+	end
+	r=0
+	i=2
+	while 1
+		x=n-int(i*(i-1)/2)
+		if x<i
+			break
+		end
+		if x%i==0
+			r+=x/i
+		end
+		i+=1
+	end
+	>r
+end

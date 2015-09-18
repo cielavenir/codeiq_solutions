@@ -1,0 +1,14 @@
+#!/usr/bin/env julia
+while (s=readline(STDIN))!="" && (n=int(s))!=0
+	r=0
+	i=2
+	x=n-1;
+	while x>=i
+		x=n-div(i*(i-1),2)
+		if mod(x,i)==0
+			r+=div(x,i)
+		end
+		i+=1
+	end
+	println(r)
+end
