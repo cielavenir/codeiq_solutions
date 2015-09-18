@@ -10,8 +10,8 @@ try:
 		i=1
 		while 1:
 			n-=i
-			if n<0: break
 			i+=1
+			if n<i: break
 			if n%i==0: r+=n//i
 		print(r)
 except EOFError:

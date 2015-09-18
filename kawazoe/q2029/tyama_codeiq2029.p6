@@ -6,7 +6,7 @@ while my $n=get() {
 	loop (my $i=1;;) {
 		$n-=$i;
 		$i++;
-		if $n < 0 {last;}
+		if $n < $i {last;}
 		if $n%$i==0 {
 			$r+=$n/$i;
 		}
