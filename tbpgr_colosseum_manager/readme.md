@@ -38,7 +38,7 @@
 - <https://codeiq.jp/ace/tbpgr_colosseum_manager/q1027>
 - <https://codeiq.jp/magazine/2014/09/16061/>
 - 最終提出：Ruby (22)
-- バッジ：チャンピオン (準優勝)
+- バッジ：チャンピオン (最短賞)
 
 ### q1069
 - 第7回デスマコロシアム
@@ -78,26 +78,26 @@
 ### q1903
 - 第12回デスマコロシアム
 - <https://codeiq.jp/ace/tbpgr_colosseum_manager/q1903>
-- <https://codeiq.jp/magazine/>
-- 最終提出：
-- バッジ：
+- <https://codeiq.jp/magazine/2015/09/29556/>
+- 最終提出：Objective-C (67)
+- バッジ：豪傑
 
 |バッジ|回数|
 |:--|:--|
-|チャンピオン||
-|豪傑||
-|強豪||
-|ファイター||
+|チャンピオン|6|
+|豪傑|4|
+|強豪|2|
+|ファイター|0|
 
 |言語|回数|
 |:--|:--|
-|PARI/GP||
-|R||
-|Octave||
-|Objective-C||
-|Ruby||
-|Perl 6||
-|AWK||
-|C99 strict||
-|D||
+|PARI/GP|1|
+|R|1|
+|Octave|2|
+|Objective-C|2|
+|Ruby|2|
+|Perl 6|1|
+|AWK|1|
+|C99 strict|1|
+|D|1|
 
