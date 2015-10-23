@@ -28,5 +28,5 @@ items=M/X(切り捨て)とすると、items*(items+1)/2*Xで求められる。
 【言語】
 Ruby
 【コード】
-@paiza_run m=10**9;r=0;(1..10).each{|n|[3,5,7,11,13,17,19,23,29,31].combination(n){|a|r+=(1-n%2*2)*((q=m/d=a.reduce(:*))*~q/2*d)}};p r
+@paiza_run ruby:m=10**9;r=0;(1..10).each{|n|[3,5,7,11,13,17,19,23,29,31].combination(n){|a|r+=(1-n%2*2)*((q=m/d=a.reduce(:*))*~q/2*d)}};p r
 #「(-1)**(~n%2)」は「(n%2*2-1)」に、「items*(items+1)/2」は「-items*~items/2」に置き換えられる。
