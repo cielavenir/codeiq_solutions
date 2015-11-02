@@ -1,32 +1,32 @@
-#!/usr/bin/ruby
-class Array
-	def unique_permutation(n=self.size)
-		return to_enum(:permutation2,n) unless block_given?
+#!/usr/bin/env crystal
+class Array(T)
+	def each_unique_permutation(n=self.size)
+		#return to_enum(:permutation2,n) unless block_given?
 		return if n<0||self.size<n
 		a=self.sort
 		yield a[0,n]
 		loop{
 			a=a[0,n]+a[n..-1].reverse
 			k=(a.size-2).downto(0).find{|i|a[i]<a[i+1]}
-			break if !k
-			l=(a.size-1).downto(k+1).find{|i|a[k]<a[i]}
+			break if k.is_a?(Nil)
+			l=(a.size-1).downto(k+1).find{|i|a[k]<a[i]}.not_nil!
 			a[k],a[l]=a[l],a[k]
 			a=a[0,k+1]+a[k+1..-1].reverse
 			yield a[0,n]
 		}
 	end
+	def unique_permutation(n=self.size)
+		a=[] of Array(T)
+		each_unique_permutation(n){|e|a<<e}
+		a
+	end
 	def partial_sum
-=begin
-		s=[0]
-		0.step(self.size-1){|i|s<<s[i]+self[i]}
-		s
-=end
 		self.reduce([0]){|s,e|s<<s.last+e}
 	end
 end
 
 N=6
-P=([0]*N+[1]*N).unique_permutation.to_a # N=5のとき、permutation.to_a.uniqの70倍速
+P=([0]*N+[1]*N).unique_permutation
 #各Pは経路を表す。1が縦、0が横を表す。
 r=0
 i=0

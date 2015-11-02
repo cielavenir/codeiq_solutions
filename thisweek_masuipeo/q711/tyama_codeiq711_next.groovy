@@ -39,4 +39,4 @@ while(true){
 	}
 	if(!next_permutation(e0))break
 }
-println r // 100360
+println r // 527552

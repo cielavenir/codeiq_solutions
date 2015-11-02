@@ -48,4 +48,4 @@ while true:
 		if flg>=2: r+=1
 		if not next_permutation[of int](f0,len(f0)): break
 	if not next_permutation[of int](e0,len(e0)): break
-print(r) # 100360
+print(r) # 527552
