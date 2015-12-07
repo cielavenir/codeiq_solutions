@@ -1,0 +1,1 @@
+print(fibonacci(input()+2))
