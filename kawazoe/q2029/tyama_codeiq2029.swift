@@ -1,5 +1,5 @@
 #!/usr/bin/env xcrun swift
-import Darwin
+import CoreFoundation
 
 var n:Int64=0
 while true {
