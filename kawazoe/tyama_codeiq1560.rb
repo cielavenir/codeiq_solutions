@@ -3,7 +3,7 @@ def solve(factor,ma)
 	r=0
 	(1..factor.size).each{|n|
 		factor.combination(n){|a|
-			divisor=a.reduce(:*)
+			divisor=a.reduce(:lcm)
 			items=ma/divisor
 			items_sum=items*(items+1)/2
 			r+=(-1)**(~n%2) * items_sum*divisor
