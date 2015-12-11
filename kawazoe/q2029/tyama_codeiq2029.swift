@@ -3,7 +3,7 @@ import CoreFoundation
 
 var n:Int64=0
 while true {
-	if (0>withUnsafePointer(&n){vscanf("%lld",getVaList([COpaquePointer($0)]))}) {break}
+	if (0>withUnsafeMutablePointer(&n){withVaList([COpaquePointer($0)]){vscanf("%lld",$0)}}) {break}
 	if n==0 {break}
 	var r:Int64=0
 	var i:Int64=2
