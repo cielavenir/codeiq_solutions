@@ -1,0 +1,111 @@
+using System;
+using System.Runtime.InteropServices;
+
+class CodeIQ2549{
+	static bufsiz=32;
+
+	[DllImport("msvcrt",CallingConvention=CallingConvention.Cdecl)]static extern write(x:int,y:string,z:int):int;
+	[DllImport("msvcrt",CallingConvention=CallingConvention.Cdecl)]static extern fopen(x:string,y:string):IntPtr;
+	[DllImport("msvcrt",CallingConvention=CallingConvention.Cdecl)]static extern fflush(x:IntPtr):int;
+	[DllImport("msvcrt",CallingConvention=CallingConvention.Cdecl)]static extern puts(x:string):int;
+	[DllImport("msvcrt",CallingConvention=CallingConvention.Cdecl)]static extern system(x:string):int;
+
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_init(a:IntPtr):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_clear(a:IntPtr):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_out_str(a:IntPtr,b:int,c:IntPtr):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_set(a:IntPtr,b:IntPtr):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_set_str(a:IntPtr,b:string,c:int):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_set_si(a:IntPtr,b:long):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_cmp_si(a:IntPtr,b:long):int;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_get_si(a:IntPtr):long;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_abs(a:IntPtr,b:IntPtr):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_add(a:IntPtr,b:IntPtr,c:IntPtr):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_add_ui(a:IntPtr,b:IntPtr,c:long):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_mul(a:IntPtr,b:IntPtr,c:IntPtr):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_mul_si(a:IntPtr,b:IntPtr,c:long):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_mul_ui(a:IntPtr,b:IntPtr,c:long):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_sub(a:IntPtr,b:IntPtr,c:IntPtr):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_sub_ui(a:IntPtr,b:IntPtr,c:long):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_ui_sub(a:IntPtr,b:long,c:IntPtr):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_tdiv_q(a:IntPtr,b:IntPtr,c:IntPtr):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_tdiv_r(a:IntPtr,b:IntPtr,c:IntPtr):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_tdiv_q_ui(a:IntPtr,b:IntPtr,c:long):void;
+[DllImport("/usr/lib/libgmp.so.3",CallingConvention=CallingConvention.Cdecl)]static extern __gmpz_tdiv_r_ui(a:IntPtr,b:IntPtr,c:long):void;
+
+	static mul(a1:IntPtr,b1:IntPtr,c1:IntPtr,d1:IntPtr,a2:IntPtr,b2:IntPtr,c2:IntPtr,d2:IntPtr):void{
+		def a0=Marshal.AllocHGlobal(bufsiz);__gmpz_init(a0);
+		def b0=Marshal.AllocHGlobal(bufsiz);__gmpz_init(b0);
+		def c0=Marshal.AllocHGlobal(bufsiz);__gmpz_init(c0);
+		def d0=Marshal.AllocHGlobal(bufsiz);__gmpz_init(d0);
+		def t=Marshal.AllocHGlobal(bufsiz);__gmpz_init(t);
+		def u=Marshal.AllocHGlobal(bufsiz);__gmpz_init(u);
+
+		__gmpz_mul(t,a1,a2);
+		__gmpz_mul(u,b1,c2);
+		__gmpz_add(a0,t,u);
+		__gmpz_mul(t,a1,b2);
+		__gmpz_mul(u,b1,d2);
+		__gmpz_add(b0,t,u);
+		__gmpz_mul(t,c1,a2);
+		__gmpz_mul(u,d1,c2);
+		__gmpz_add(c0,t,u);
+		__gmpz_mul(t,c1,b2);
+		__gmpz_mul(u,d1,d2);
+		__gmpz_add(d0,t,u);
+
+		__gmpz_set(a1,a0);
+		__gmpz_set(b1,b0);
+		__gmpz_set(c1,c0);
+		__gmpz_set(d1,d0);
+
+		__gmpz_clear(a0);Marshal.FreeHGlobal(a0);
+		__gmpz_clear(b0);Marshal.FreeHGlobal(b0);
+		__gmpz_clear(c0);Marshal.FreeHGlobal(c0);
+		__gmpz_clear(d0);Marshal.FreeHGlobal(d0);
+		__gmpz_clear(t);Marshal.FreeHGlobal(t);
+		__gmpz_clear(u);Marshal.FreeHGlobal(u);
+	}
+
+	static Main():void{
+		def stdout=fopen("/dev/stdout","w");
+
+		def a1=Marshal.AllocHGlobal(bufsiz);__gmpz_init(a1);
+		def b1=Marshal.AllocHGlobal(bufsiz);__gmpz_init(b1);
+		def c1=Marshal.AllocHGlobal(bufsiz);__gmpz_init(c1);
+		def d1=Marshal.AllocHGlobal(bufsiz);__gmpz_init(d1);
+		def a2=Marshal.AllocHGlobal(bufsiz);__gmpz_init(a2);
+		def b2=Marshal.AllocHGlobal(bufsiz);__gmpz_init(b2);
+		def c2=Marshal.AllocHGlobal(bufsiz);__gmpz_init(c2);
+		def d2=Marshal.AllocHGlobal(bufsiz);__gmpz_init(d2);
+
+		__gmpz_set_si(a1,1);
+		__gmpz_set_si(b1,0);
+		__gmpz_set_si(c1,0);
+		__gmpz_set_si(d1,1);
+		__gmpz_set_si(a2,1);
+		__gmpz_set_si(b2,1);
+		__gmpz_set_si(c2,1);
+		__gmpz_set_si(d2,0);
+
+		mutable N=int.Parse(Console.ReadLine());
+		N=(N+3)/2*2;
+		for(;N>0;N>>=1){
+			when((N&1)>0)mul(a1,b1,c1,d1,a2,b2,c2,d2);
+			mul(a2,b2,c2,d2,a2,b2,c2,d2);
+		}
+		__gmpz_sub_ui(c1,c1,1);
+		__gmpz_out_str(stdout,10,c1);
+		fflush(stdout);
+		puts("");
+		fflush(stdout);
+
+		__gmpz_clear(a1);Marshal.FreeHGlobal(a1);
+		__gmpz_clear(b1);Marshal.FreeHGlobal(b1);
+		__gmpz_clear(c1);Marshal.FreeHGlobal(c1);
+		__gmpz_clear(d1);Marshal.FreeHGlobal(d1);
+		__gmpz_clear(a2);Marshal.FreeHGlobal(a2);
+		__gmpz_clear(b2);Marshal.FreeHGlobal(b2);
+		__gmpz_clear(c2);Marshal.FreeHGlobal(c2);
+		__gmpz_clear(d2);Marshal.FreeHGlobal(d2);
+	}
+}
