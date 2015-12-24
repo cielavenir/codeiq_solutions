@@ -19,3 +19,4 @@
 |Ace Number|q1561|
 |Second Equation|q2275|
 |Twin Triangle|q2463|
+|Root Power|q1563|
