@@ -13,12 +13,11 @@ function solve(n)
 	printf("%ld\n",r);
 endfunction
 
-n=int64(input(""));
-if(true)
-	solve(n);
-else
-	while(n>0)
+s=fgetl(stdin);
+while(s!=-1)
+	n=int64(str2num(s));
+	if(n>0)
 		solve(n);
-		n=int64(input(""));
-	endwhile
-endif
+	endif
+	s=fgetl(stdin);
+endwhile

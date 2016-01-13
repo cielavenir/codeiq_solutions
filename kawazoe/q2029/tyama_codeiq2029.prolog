@@ -10,6 +10,5 @@ solve(R,I,N,RET) :-
 		RET is R
 	).
 
-main2() :- readln([N]),N>0 -> solve(0,2,N,R),format("~w\n",[R]),main2; halt.
-main :- true -> readln([N]),solve(0,2,N,R),format("~w\n",[R]),halt; main2.
+main :- not(at_end_of_stream(user_input)),readln([N]),N>0 -> solve(0,2,N,R),format("~w\n",[R]),main; halt.
 :- initialization(main).
