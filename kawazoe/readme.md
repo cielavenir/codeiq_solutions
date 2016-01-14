@@ -20,3 +20,4 @@
 |Second Equation|q2275|
 |Twin Triangle|q2463|
 |Root Power|q1563|
+|Square Quartet|q2628|
