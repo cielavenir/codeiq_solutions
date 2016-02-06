@@ -1,8 +1,10 @@
 #!/usr/bin/ruby
 #NEWICK=true
 NEWICK=false
+#CODEEVAL=true
+CODEEVAL=false
 
-CODES=['r','g','b']
+CODES=CODEEVAL ? ['0','1'] : ['r','g','b']
 WIDTH=CODES.size
 def dfs(str,code) #assign code
 	r=[]
@@ -17,40 +19,55 @@ def dfs(str,code) #assign code
 				i+=1
 			end
 		else
-			r+=[str[i,1]+':'+code+CODES[c]]
+			r+=[str[i,1]+(CODEEVAL ? ': ' : ':')+code+CODES[c]]
 		end
 		c+=1
 		i+=1
 	end
 	return r
 end
-h={}
-DATA.each{|e|
-	s,n=e.split
-	h[s]=n.to_i
-}
-#build huffman tree
-a=h.map{|k,v|[v,k]}.sort
-if (h.size-WIDTH)%(WIDTH-1)>0
-	b=a.shift(WIDTH-(h.size-WIDTH)%(WIDTH-1)).transpose
-	a=(a+[[b[0].reduce(:+),'('+b[1]*(NEWICK ? ',' : '')+')']]).sort
+
+def huffman(h)
+	#build huffman tree
+	a=h.map{|k,v|[v,k]}.sort
+	if (h.size-WIDTH)%(WIDTH-1)>0
+		b=a.shift(WIDTH-(h.size-WIDTH)%(WIDTH-1)).transpose
+		a=(a+[[b[0].reduce(:+),'('+b[1]*(NEWICK ? ',' : '')+')']]).sort
+	end
+	while a.size>1
+		b=a.shift(WIDTH).transpose
+		raise if b[0].size!=WIDTH
+		a=(a+[[b[0].reduce(:+),'('+b[1]*(NEWICK ? ',' : '')+')']]).sort
+	end
+	# a => [[9371, "((O(((Q(XZ)J)VB)YW)I)(AT(U(PFK)L))(E(DRS)(N(GMC)H)))"]]
+	if NEWICK
+		# ((O,(((Q,(X,Z),J),V,B),Y,W),I),(A,T,(U,(P,F,K),L)),(E,(D,R,S),(N,(G,M,C),H)));
+		puts a[0][1]+';'
+		exit
+	end
+	r=dfs(a[0][1][1..-1],'')
+	#r.sort_by{|e|e.split(':')[1].size}.each{|e|
+	if CODEEVAL
+		puts r.sort*'; '+';'
+	else
+		puts r.sort
+	end
 end
-while a.size>1
-	b=a.shift(WIDTH).transpose
-	raise if b[0].size!=WIDTH
-	a=(a+[[b[0].reduce(:+),'('+b[1]*(NEWICK ? ',' : '')+')']]).sort
+
+if CODEEVAL
+	$<.each{|e|
+		h=Hash.new(0)
+		e.chomp.chars{|c|h[c]+=1}
+		huffman(h)
+	}
+else
+	h={}
+	DATA.each{|e|
+		s,n=e.split
+		h[s]=n.to_i
+	}
+	huffman(h)
 end
-# a => [[9371, "((O(((Q(XZ)J)VB)YW)I)(AT(U(PFK)L))(E(DRS)(N(GMC)H)))"]]
-if NEWICK
-	# ((O,(((Q,(X,Z),J),V,B),Y,W),I),(A,T,(U,(P,F,K),L)),(E,(D,R,S),(N,(G,M,C),H)));
-	puts a[0][1]+';'
-	exit
-end
-r=dfs(a[0][1][1..-1],'')
-#r.sort_by{|e|e.split(':')[1].size}.each{|e|
-r.sort.each{|e|
-	puts e
-}
 
 =begin
 A:gr
