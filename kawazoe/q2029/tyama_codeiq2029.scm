@@ -1,6 +1,6 @@
 #!/usr/bin/env gosh
 
-(define calc (lambda(r i n)
+(define (calc r i n)
 	(let ((x (- n (quotient (* i (- i 1)) 2))))
 		(if (>= x i)
 			(if (zero? (modulo x i))
@@ -10,16 +10,16 @@
 			r
 		)
 	)
-))
+)
 
-(define ma (lambda()
-	(let ((n (read (current-input-port))))
+(define (ma)
+	(let ((n (read)))
 		(if (and (not (eof-object? n)) (not (zero? n))) (begin
 			(write (calc 0 2 n))
 			(newline)
 			(ma)
 		))
 	)
-))
+)
 
 (ma)
