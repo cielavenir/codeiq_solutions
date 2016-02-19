@@ -22,3 +22,4 @@
 |Root Power|q1563|
 |Square Quartet|q2628|
 |Plus Minus Zero|q2611|
+|Long Long String|q2683|
