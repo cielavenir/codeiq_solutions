@@ -1,4 +1,4 @@
-#!/usr/bin/env xcrun swift
+//usr/bin/env swift $0 $@;exit
 import CoreFoundation
 
 var n:Int64=0
