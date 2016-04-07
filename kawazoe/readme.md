@@ -23,3 +23,5 @@
 |Square Quartet|q2628|
 |Plus Minus Zero|q2611|
 |Long Long String|q2683|
+|Division Nine|q2561|
+|Code Triathlon 2|q2529|
