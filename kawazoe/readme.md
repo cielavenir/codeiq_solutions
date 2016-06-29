@@ -26,3 +26,5 @@
 |Division Nine|q2561|
 |Code Triathlon 2|q2529|
 |Red and White|q2812|
+|Minor Game|q2837|
+|After Dot|q2831|
