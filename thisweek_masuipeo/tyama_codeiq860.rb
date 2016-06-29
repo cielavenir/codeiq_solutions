@@ -9,7 +9,7 @@ if A.size>10
 	exit
 end
 [*0..9].permutation(A.size){|a|
-	h=Hash[*[A,a].transpose.flatten(1)]
+	h=Hash[[A,a].transpose]
 	next if HEAD.chars.any?{|c|h[c]==0}
 	str=PROBLEM.chars.map{|c|h[c]||c}*''
 	puts str if eval(str)

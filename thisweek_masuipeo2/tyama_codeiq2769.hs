@@ -5,9 +5,9 @@ split p [] = []
 split p s = x : (split p $ dropWhile p $ y)
 	where (x,y) = break p s
 
-main = do
-	[m,n] <- (map read . (split (== ','))) <$> getLine
-	let g = gcd m n
-	let h = (m `div` g) * n
-	print h
-	print (h * (if g==1 then 1 else 2))
+main =
+	(map read . (split (== ','))) <$> getLine >>= \[m,n] ->
+		let g = gcd m n in
+		let h = (m `div` g) * n in
+		print h
+		>> print (h * (if g==1 then 1 else 2))
