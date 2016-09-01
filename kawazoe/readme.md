@@ -28,3 +28,5 @@
 |Red and White|q2812|
 |Minor Game|q2837|
 |After Dot|q2831|
+|Prime Hopper|q2821|
+|Multiple Table|q2934|
