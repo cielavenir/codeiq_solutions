@@ -30,3 +30,4 @@
 |After Dot|q2831|
 |Prime Hopper|q2821|
 |Multiple Table|q2934|
+|Triangle Maze|q2833|
