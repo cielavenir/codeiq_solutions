@@ -31,3 +31,4 @@
 |Prime Hopper|q2821|
 |Multiple Table|q2934|
 |Triangle Maze|q2833|
+|Digital Root|q2975|
