@@ -34,3 +34,4 @@
 |Digital Root|q2975|
 |Division Sum|q2903|
 |Spiral Walk|q3053|
+|Carry Over|q3097|
