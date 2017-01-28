@@ -4,7 +4,7 @@ if sys.version_info[0]>=3:
 	raw_input=input
 	xrange=range
 
-if sys.platform=='linux':
+if sys.platform.startswith('linux'):
 	libc=ctypes.cdll.LoadLibrary('libc.so.6')
 	popcount=lambda n:libc.__sched_cpucount(ctypes.sizeof(ctypes.c_long),(ctypes.c_long*1)(n))
 elif sys.platform=='darwin':
