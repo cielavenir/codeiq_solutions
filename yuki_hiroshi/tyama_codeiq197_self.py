@@ -70,33 +70,18 @@ def rho(n):
 	if n==1: return r
 	return r+rho2(n)
 
-from collections import Counter,defaultdict
 from functools import reduce
-'''
-try:
-	import sympy
-	factor=sympy.factorint
-except ImportError:
-	try:
-		import nzmath
-		factor=nzmath.factor.methods.factor
-	except ImportError:
-		import sys
-		print('sympy or nzmath is required')
-		sys.exit(1)
-'''
-factor=lambda n:Counter(rho(n))
-
-def solve(h):
-	return (reduce(lambda s,e:s*(2*e[1]+1),h.items(),1)+1)//2
-def range_factor(r):
-	h=defaultdict(int)
-	for i in r:
-		for e in factor(i).items(): h[e[0]]+=e[1]
-	return h
-
-print(solve(factor(24)))
-print(solve(factor(720)))
-print(solve(range_factor(range(1,51))))
-
-# print (reduce(lambda s,e:s*(2*e[1]+1),__import__('sympy').factorint(reduce(lambda a,b:a*b,range(1,51))).items(),1)+1)/2
+N=280671392065546467397265294532969672241810318954163887187279320454220348884327
+table=rho(N)
+l=len(table)
+m=N*2+1
+r=None
+for i in xrange(3**(l-2)*2):
+	table2=[[] for _ in xrange(3)]
+	for j,e in enumerate(table): table2[i//3**j%3].append(e)
+	edge=[reduce(lambda x,y:x*y,e,1) for e in table2]
+	surface=edge[0]*edge[1]+edge[1]*edge[2]+edge[2]*edge[0]
+	if surface<m:
+		m=surface
+		r=table2
+print('x'.join(map(str,sorted(reduce(lambda x,y:x*y,e,1) for e in r))))
