@@ -35,12 +35,28 @@ puts 'P = '+P.to_s
 Q=P.prime_division.max.first
 puts 'Q = '+Q.to_s
 #Q3
+
+=begin
 r=0
 R=Prime.each.with_index(1){|e,i|
 	break r if e>Q
 	r+=e if i.prime?
 }
 puts 'R = '+R.to_s
+=end
+
+def take_prime(prev)
+	return to_enum(:take_prime,prev) if !block_given?
+	before=0
+	Prime.each{|e|
+		d=e-before
+		(d-1).times{prev.next}
+		yield prev.next
+		before=e
+	}
+end
+it=take_prime(Prime.each)
+puts 'R = '+it.take_while{|e|e<=Q}.reduce(:+).to_s
 
 __END__
 【解答】
