@@ -26,9 +26,9 @@ class Integer
 			a+=1 while a.gcd(n)!=1 #todo#
 			r=a.pow_binary_mod(d,n)
 			next if r==1||r==n-1
-			if s.times{|j|
+			if s.times.none?{|j|
 				r=r.pow_binary_mod(2,n)
-				break if r==n-1
+				r==n-1
 			}
 				return false
 			end
