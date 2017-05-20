@@ -36,3 +36,6 @@
 |Spiral Walk|q3053|
 |Carry Over|q3097|
 |Room and Roof|q3130|
+|Prime Pair|q3181|
+|Crossing Word|q2841|
+|Lonely Rook|q3229|
