@@ -1,7 +1,7 @@
 ## kawazoe
 
 |問題名|CodeIQ ID|
-|:--|:--|:--|
+|:--|:--|
 |Return Number|q1121|
 |Billion Dollar|q1168|
 |Digital Taboo|q1206|
