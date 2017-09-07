@@ -39,3 +39,7 @@
 |Prime Pair|q3181|
 |Crossing Word|q2841|
 |Lonely Rook|q3229|
+|Tangent Fraction|q3182|
+|Wood Keeper|q3314|
+|Candy and Chocolate|q3354|
+|Divide Out|q3284|
