@@ -66,13 +66,18 @@ char tetromino(const set<pair<int,int> > &island){ //v is sorted by x, then y
 		vector<int>d;
 		for(i=0;i<4;i++)if(island.find(make_pair(it->first+D[i][0],it->second+D[i][1]))!=island.end())d.push_back(i);
 		if(d.size()==3)return 'T';
-		else if(d.size()==2&&(
-			island.find(make_pair(it->first+D[ d[0] ][0]*2,it->second+D[ d[0] ][1]*2))!=island.end()||
-			island.find(make_pair(it->first+D[ d[1] ][0]*2,it->second+D[ d[1] ][1]*2))!=island.end()
-		))return 'L';
+		if(d.size()==2 && abs(d[0]-d[1])!=2){
+			//if(d==vector<int>({0,3}))d={3,0};
+			if(d[0]==0&&d[1]==3)swap(d[0],d[1]);
+			if(island.find(make_pair(it->first+D[ d[0] ][0]*2,it->second+D[ d[0] ][1]*2))!=island.end())return 'L';
+			if(island.find(make_pair(it->first+D[ d[1] ][0]*2,it->second+D[ d[1] ][1]*2))!=island.end())return 'L'; //'J';
+			if(island.find(make_pair(it->first+D[ d[0] ][0]+D[ (d[0]-1+4)%4 ][0],it->second+D[ d[0] ][1]+D[ (d[0]-1+4)%4 ][1]))!=island.end())return 'S'; //'Z';
+			if(island.find(make_pair(it->first+D[ d[1] ][0]+D[ (d[1]+1)%4 ][0],it->second+D[ d[1] ][1]+D[ (d[1]+1)%4 ][1]))!=island.end())return 'S';
+		}
 	}
-	return 'S';
+	return '-';
 }
+/*
 int connected(const set<pair<int,int> > &island){
 	queue<pair<int,int> > q;
 	q.push(*island.begin());
@@ -90,7 +95,7 @@ int connected(const set<pair<int,int> > &island){
 	}
 	return se.size()==island.size();
 }
-	
+*/
 int main(){
 	vector<string>v0(8);
 	for(int i=0;i<8;i++)cin>>v0[i];
@@ -101,11 +106,11 @@ int main(){
 	do{
 		set<pair<int,int> >se1(v.begin(),v.begin()+4);
 		set<pair<int,int> >se2(v.begin()+4,v.end());
-		if(connected(se1)&&connected(se2)){
+		//if(connected(se1)&&connected(se2)){
 			string r=string(1,tetromino(se1))+tetromino(se2);
 			sort(r.begin(),r.end());
-			ret.insert(r);
-		}
+			if(r[0]!='-')ret.insert(r);
+		//}
 	}while(next_combination(v.begin(),v.begin()+4,v.end()));
 	if(ret.empty()){
 		cout<<'-'<<endl;

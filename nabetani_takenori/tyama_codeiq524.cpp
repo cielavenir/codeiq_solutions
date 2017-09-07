@@ -48,14 +48,14 @@ int islandsize(int x,int y,set<pair<int,int> >&area,set<pair<int,int> >&s){
 	r+=islandsize(x,y+1,area,s);
 	return r;
 }
-string tetromino(set<pair<int,int> > &island){ //v is sorted by x, then y
+char tetromino(const set<pair<int,int> > &island){ //v is sorted by x, then y
 	int i,s;
 	set<pair<int,int> >::iterator it=island.begin();
 	if(
 		island.find(make_pair(it->first+1,it->second))!=island.end()&&
 		island.find(make_pair(it->first,it->second+1))!=island.end()&&
 		island.find(make_pair(it->first+1,it->second+1))!=island.end()
-	)return "O";
+	)return 'O';
 	if((
 		island.find(make_pair(it->first+1,it->second))!=island.end()&&
 		island.find(make_pair(it->first+2,it->second))!=island.end()&&
@@ -64,17 +64,21 @@ string tetromino(set<pair<int,int> > &island){ //v is sorted by x, then y
 		island.find(make_pair(it->first,it->second+1))!=island.end()&&
 		island.find(make_pair(it->first,it->second+2))!=island.end()&&
 		island.find(make_pair(it->first,it->second+3))!=island.end()
-	))return "I";
+	))return 'I';
 	for(it=island.begin();it!=island.end();it++){
 		vector<int>d;
 		for(i=0;i<4;i++)if(island.find(make_pair(it->first+D[i][0],it->second+D[i][1]))!=island.end())d.push_back(i);
-		if(d.size()==3)return "T";
-		else if(d.size()==2&&(
-			island.find(make_pair(it->first+D[ d[0] ][0]*2,it->second+D[ d[0] ][1]*2))!=island.end()||
-			island.find(make_pair(it->first+D[ d[1] ][0]*2,it->second+D[ d[1] ][1]*2))!=island.end()
-		))return "L";
+		if(d.size()==3)return 'T';
+		if(d.size()==2 && abs(d[0]-d[1])!=2){
+			//if(d==vector<int>({0,3}))d={3,0};
+			if(d[0]==0&&d[1]==3)swap(d[0],d[1]);
+			if(island.find(make_pair(it->first+D[ d[0] ][0]*2,it->second+D[ d[0] ][1]*2))!=island.end())return 'L';
+			if(island.find(make_pair(it->first+D[ d[1] ][0]*2,it->second+D[ d[1] ][1]*2))!=island.end())return 'L'; //'J';
+			if(island.find(make_pair(it->first+D[ d[0] ][0]+D[ (d[0]-1+4)%4 ][0],it->second+D[ d[0] ][1]+D[ (d[0]-1+4)%4 ][1]))!=island.end())return 'S'; //'Z';
+			if(island.find(make_pair(it->first+D[ d[1] ][0]+D[ (d[1]+1)%4 ][0],it->second+D[ d[1] ][1]+D[ (d[1]+1)%4 ][1]))!=island.end())return 'S';
+		}
 	}
-	return "S";
+	return '-';
 }
 int main(){
 #ifdef TEST
@@ -85,10 +89,10 @@ int main(){
 #endif
 	vector<int> call=split_int(_call,",");
 
-	map<string,int> total;
+	map<char,int> total;
 	string line;
 	for(;getline(cin,line);){
-		string result="-";
+		char result='-';
 		map<int,pair<int,int> >card;
 		vector<string>a=split(line,"/");
 		int y=0,x;
@@ -106,13 +110,13 @@ int main(){
 			result=tetromino(island);
 			break;
 		}
-		if(result!="-")total[result]++;
+		if(result!='-')total[result]++;
 #ifdef TEST
 		cout<<result<<endl<<flush;
 #endif
 	}
 #ifndef TEST
-	cout<<"I:"<<total["I"]<<",L:"<<total["L"]<<",O:"<<total["O"]<<",S:"<<total["S"]<<",T:"<<total["T"]<<endl;
+	cout<<"I:"<<total['I']<<",L:"<<total['L']<<",O:"<<total['O']<<",S:"<<total['S']<<",T:"<<total['T']<<endl;
 #endif
 }
 /*
