@@ -65,7 +65,7 @@ rescue LoadError
 end
 require 'zlib'
 h=Hash.new(0)
-reader.call(Zlib::Inflate.inflate(DATA.read.unpack('m')[0])).each{|a|
+reader.call(Zlib::Inflate.inflate(*DATA.read.unpack('m'))).each{|a|
 	A[0].product(*A[1..-1]).each{|e|
 		x=e.reduce(a){|s,f|f.call(s)}
 		h[x.max_path]+=1

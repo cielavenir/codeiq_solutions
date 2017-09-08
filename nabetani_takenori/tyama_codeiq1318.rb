@@ -5,7 +5,7 @@ require 'stringio'
 Encoding.default_external=Encoding::UTF_8
 
 if __FILE__==$0
-	f=StringIO.new(Zlib.inflate($<.read.unpack('m')[0]).force_encoding(Encoding.default_external))
+	f=StringIO.new(Zlib.inflate(*$<.read.unpack('m')).force_encoding(Encoding.default_external))
 	#f=$<
 	while line=f.gets
 		id,n,data,answer=line.chomp.split
