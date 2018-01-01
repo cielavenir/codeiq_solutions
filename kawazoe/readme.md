@@ -43,3 +43,7 @@
 |Wood Keeper|q3314|
 |Candy and Chocolate|q3354|
 |Divide Out|q3284|
+|Count Three|q3397|
+|Loop Tracking|q3285|
+|Straight Lines|q3434|
+|Pair Drop|q3485|
