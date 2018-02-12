@@ -47,3 +47,5 @@
 |Loop Tracking|q3285|
 |Straight Lines|q3434|
 |Pair Drop|q3485|
+|Tower Building|q3459|
+|LCM Parade|q3525|
