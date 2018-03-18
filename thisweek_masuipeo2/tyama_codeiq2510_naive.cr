@@ -26,14 +26,14 @@ T={
 	},
 }
 
-$memo={} of Array(Int32) => Int64
+Memo={} of Array(Int32) => Int64
 def dfs(m,x,y)
 	if x==0 && y==m.size
 		return 1
 	end
 	m0=m.flatten
-	if $memo.has_key?(m0)
-		return $memo[m0]
+	if Memo.has_key?(m0)
+		return Memo[m0]
 	end
 	if x==m[y].size
 		return dfs(m,0,y+1)
@@ -53,10 +53,10 @@ def dfs(m,x,y)
 			e.size.times{|y0|e[y0].size.times{|x0|m[y+y0][x+x0]=0}}
 		end
 	}
-	$memo[m0]=r
+	Memo[m0]=r
 end
 
 w=12
 h=5
 m=h.times.map{[0]*w}.to_a
-p dfs(m,0,0)
+puts dfs(m,0,0)
