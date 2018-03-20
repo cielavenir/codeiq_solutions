@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title>EmmetでHTML高速記述</title>
+	<link rel="stylesheet" href="./vendor/codemirror/v4/codemirror.css" />
+	<script src="./vendor/codemirror/v4/codemirror.js"></script>
+	<script src="./vendor/codemirror/v4/xml.js"></script>
+	<script src="./vendor/codemirror/v4/css.js"></script>
+	<script src="./vendor/codemirror/v4/htmlmixed.js"></script>
+
+	<script src="./emmet.min.js"></script>
+	
+	<style>
+	.CodeMirror {
+		border: 1px solid black;
+	}
+	
+	.cm-delimit {
+		color: #fa4;
+	}
+	</style>
+</head>
+<body>
+	<h1>EmmetでHTML高速記述</h1>
+	<form><textarea id="code" name="code">下部で問題レベルを選択しEmmetを入力、採点を押下することでこのウィンドウに出力HTMLが表示されます
+※本HTML内のemmet.jsは修正済みのバージョンですので採点基準が異なります</textarea></form>
+	<hr>
+	<form id="emmet_form">
+		問題: <input type="radio" name="level" value="1" id="level1" checked> <label for="level1">Lv1</label> <input type="radio" name="level" value="2" id="level2"> <label for="level2">Lv2</label><br>
+		<label for="emmet">答案Emmet:</label> <input type="text" id="emmet" size="150"><br>
+		<input type="submit" value="採点"><br>
+		採点結果: <span id="judge"></span>
+	</form>
+	<script>
+		var editor=CodeMirror.fromTextArea(document.getElementById("code"), {
+			mode : "text/html",
+			lineNumbers : true,
+			profile: 'xhtml' /* define Emmet output profile */
+		});
+		var textarea=document.getElementsByTagName('textarea')[1];
+		//textarea.disabled=true;//readOnly=true; //unfortunately this line kills Trident/Gecko.
+
+		//Emmet problem judge (revised) by @cielavenir.
+		document.getElementById('emmet_form').addEventListener('submit',function(e){
+			e.preventDefault();
+
+			//set level
+			var level='1';
+			if(document.getElementsByName("level")[1].checked)level='2';
+			var score={'1':[109,85,78,0],'2':[218,174,151,0]}[level];
+			var grade=['初級','中級','上級','神級'];
+
+			//control CodeMirror
+			var emmet=document.getElementById('emmet').value;
+			editor.setValue(emmet);
+			editor.setCursor(emmet.length);
+			//fire Tab
+			var event = document.createEvent('Event');event.initEvent('keydown',true,true);event.charCode=9;event.keyCode=9;
+			textarea.dispatchEvent(event);
+
+			var judge=emmet.length+'文字 ';
+			if(editor.getValue()==document.getElementById('answer'+level).value){
+				judge+='正解 ';
+				for(var i=0;i<score.length;i++)if(score[i]<=emmet.length){judge+=grade[i];break;}
+			}else{
+				judge+='不正解';
+			}
+			document.getElementById('judge').textContent=judge;
+		});
+	</script>
+
+<textarea id="answer1" style="visibility:hidden;"><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<div class="class_div1" id="id_div1">inner_div1</div>
+	<div class="class_div2" id="id_div2">inner_div2</div>
+	<div class="class_div3" id="id_div3">inner_div3</div>
+	<div class="class_div4" id="id_div4">inner_div4</div>
+	<div class="class_div5" id="id_div5">inner_div5</div>
+	<hr />
+	<table>
+		<tr class="row1">
+			<td class="col1">inner_column1</td>
+			<td class="col2">inner_column2</td>
+			<td class="col3">inner_column3</td>
+			<td class="col4">inner_column4</td>
+			<td class="col5">inner_column5</td>
+		</tr>
+		<tr class="row2">
+			<td class="col1">inner_column1</td>
+			<td class="col2">inner_column2</td>
+			<td class="col3">inner_column3</td>
+			<td class="col4">inner_column4</td>
+			<td class="col5">inner_column5</td>
+		</tr>
+	</table>
+</body>
+</html></textarea>
+<textarea id="answer2" style="visibility:hidden;"><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<div class="header">
+		<ol>
+			<li class="headers">
+				<h1>title1</h1>
+				<h2>title2</h2>
+				<h3>title3</h3>
+				<h4>title4</h4>
+				<h5>title5</h5>
+			</li>
+		</ol>
+	</div>
+	<div class="body">
+		<ul>
+			<li class="bodies">Lorem ipsum dolor sit amet.</li>
+		</ul>
+		<input type="text" name="input_name" id="input_id" />
+		<input type="password" name="pass_name" id="pass_id" />
+		<p>before1<br />after1</p>
+		<p>before2<br />after2</p>
+		<p>before3<br />after3</p>
+		<p>before4<br />after4</p>
+		<p>before5<br />after5</p>
+	</div>
+</body>
+</html></textarea>
+</body>
+</html>
