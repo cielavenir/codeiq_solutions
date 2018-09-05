@@ -6,7 +6,7 @@ long long bit(int n){
 	long long ret=0;
 	int i=n-1,idx;
 	for(;i>=0;i--){
-		for(idx=A[i];idx;idx&=idx-1)ret+=W[idx];
+		for(idx=A[i]-1;idx;idx&=idx-1)ret+=W[idx];
 		for(idx=A[i];idx<n;idx+=idx&-idx)W[idx]++;
 	}
 	return ret;
