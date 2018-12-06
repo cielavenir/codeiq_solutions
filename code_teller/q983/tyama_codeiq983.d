@@ -1,11 +1,10 @@
 #!/usr/bin/rdmd
-import std.cstream;
+import std.stdio;
 int main(){
 	long starting=5;
 	int bse=10;
 	long n;
-	for(;din.readf(&n);){
-		if(!n)break; //lol?
+	for(;stdin.readf(" %d",&n);){
 		n+=starting-2;
 		long digits=1;
 		long expbase=1;
@@ -17,7 +16,7 @@ int main(){
 		long num=expbase+n/digits;
 		long d=digits-1-n%digits;
 		for(;d--;)num/=bse;
-		dout.writefln("%d",num%bse);
+		stdout.writefln("%d",num%bse);
 	}
 	return 0;
 }

@@ -1,8 +1,8 @@
 import java.util.*
 fun main(args: Array<String>){
 	val cin = Scanner(System.`in`)
-	val starting;Long=5
-	val bse=10
+	val starting:Long=5
+	val bse:Long=10
 	while(cin.hasNext()){
 		var n=cin.nextLong()
 		n+=starting-2
@@ -17,7 +17,7 @@ fun main(args: Array<String>){
 		}
 		var num=expbase+n/digits
 		var d:Long=0
-		while(d<digits-1-n%digits)num/=bse
+		while(d<digits-1-n%digits){num/=bse;d+=1}
 		println(num%bse)
 	}
 }

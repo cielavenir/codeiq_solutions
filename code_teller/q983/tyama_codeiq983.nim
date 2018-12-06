@@ -4,10 +4,8 @@
 import strutils
 var starting=5
 var bse=10
-while true:
- var s=readLine(stdin)
- if s=="":
-  break
+var s=""
+while stdin.readLine(s):
  var n=parseBiggestInt(s)
  n=n+starting-2
  var digits:int64=1

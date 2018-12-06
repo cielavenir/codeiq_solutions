@@ -1,11 +1,15 @@
 //usr/bin/env swift $0 $@;exit
-import CoreFoundation
+#if _runtime(_ObjC)
+import Darwin
+#else
+import Glibc
+#endif
 
 let starting:Int64=5
 let bse:Int64=10
 var n:Int64=0
 while true {
-	if (0>withUnsafeMutablePointer(&n){withVaList([COpaquePointer($0)]){vscanf("%lld",$0)}}) {break}
+	if (0>withUnsafeMutablePointer(to:&n){withVaList([OpaquePointer(UnsafeMutableRawPointer($0))]){vscanf("%lld",$0)}}) {break}
 	n+=starting-2
 	var digits:Int64=1
 	var expbase:Int64=1
