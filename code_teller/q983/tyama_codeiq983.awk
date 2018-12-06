@@ -12,7 +12,6 @@
 	}
 	num=expbase+int(n/digits)
 	d=digits-1-n%digits
-	print d
 	for(;d>0;num=int(num/bse))d=d-1
 	print num%bse
 }
