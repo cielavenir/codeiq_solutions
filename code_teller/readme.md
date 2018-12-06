@@ -5,7 +5,7 @@
 ### 893 (7の数を数えよう)
 
 - 問題：http://ozy4dm.hateblo.jp/entry/2018/04/25/105841
-- 実質 https://abc029.contest.atcoder.jp/tasks/abc029_d　と同じため
+- 実質 https://abc029.contest.atcoder.jp/tasks/abc029_d と同じため
 
 ### 983 (n番目の数字は?)
 
