@@ -1,0 +1,20 @@
+#!/usr/bin/env tt
+starting=5
+bse=10
+while(s=<>){
+	n=int(s)
+	n+=starting-2
+	digits=1
+	expbase=1
+	while((x=digits*expbase*(bse-1))<=n){
+		n-=x
+		digits++
+		expbase*=bse
+	}
+	num=expbase+n/digits
+	d=digits-1-n%digits
+	for(;d;d--){
+		num/=bse
+	}
+	print("%d\n",num%bse)
+}

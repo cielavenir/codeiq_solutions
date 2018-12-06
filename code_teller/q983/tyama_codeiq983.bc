@@ -1,0 +1,23 @@
+#!/usr/bin/bc
+scale=0
+n=read()
+t=8
+if(n==1)t=11
+starting=5
+bse=10
+for(i=0;i<t;i++){
+	n+=starting-2
+	digits=1
+	expbase=1
+	for(;(x=digits*expbase*(bse-1))<=n;n-=x){
+		digits=digits+1
+		expbase=expbase*bse
+	}
+	num=expbase+n/digits
+	d=digits-1-n%digits
+	for(;d>0;num=num/bse)d=d-1
+	print num%bse
+	print "\n"
+	if(i<t-1)n=read()
+}
+quit

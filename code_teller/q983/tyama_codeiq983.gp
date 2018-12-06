@@ -1,0 +1,28 @@
+f()={
+	n=input();
+	t=8;
+	if(n==1,t=11);
+	starting=5;
+	bse=10;
+	for(i=1,t,
+		n=n+starting-2;
+		digits_=1;
+		expbase=1;
+		x=bse-1;
+		while(x<=n,
+			n-=x;
+			digits_=digits_+1;
+			expbase=expbase*bse;
+			x=digits_*expbase*(bse-1)
+		);
+		num=expbase+n\digits_;
+		d=digits_-1-n%digits_;
+		for(j=1,d,
+			num=num\bse;
+			d=d-1
+		);
+		print(num%bse);
+		if(i<t,n=input());
+	)
+}
+f()

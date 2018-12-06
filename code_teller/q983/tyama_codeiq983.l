@@ -1,0 +1,25 @@
+#!/usr/bin/env clisp
+
+(defun calc2 (d num bse)
+	(if (= 0 d)
+		(mod num bse)
+		(calc2 (- d 1) (truncate num bse) bse)
+	)
+)
+(defun calc (digits expbase bse x n)
+	(if (> x n)
+		(calc2 (- (- digits 1) (mod n digits)) (+ expbase (truncate n digits)) bse)
+		(calc (+ digits 1) (* expbase bse) bse (* (* (+ digits 1) (* expbase bse)) (- bse 1)) (- n x))
+	)
+)
+
+(defun ma ()
+	(let ((n (read nil nil)))
+		(if (not (eql n nil)) (progn
+			(write (calc 1 1 10 9 (+ n 3)))
+			(fresh-line)
+			(ma)
+		))
+	)
+)
+(ma)

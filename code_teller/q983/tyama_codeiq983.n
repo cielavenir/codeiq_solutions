@@ -1,0 +1,26 @@
+using System.Console;
+mutable s:string;
+mutable starting,bse,n,digits,expbase,x,num,d:long;
+starting=5;
+bse=10;
+s=ReadLine();
+while(s!=null){
+	n=long.Parse(s)+starting-2l;
+	digits=1l;
+	expbase=1l;
+	x=bse-1l;
+	while(x<=n){
+		n=n-x;
+		digits=digits+1l;
+		expbase=expbase*bse;
+		x=digits*expbase*(bse-1l);
+	}
+	num=expbase+n/digits;
+	d=digits-1l-n%digits;
+	while(d>0){
+		num=num/bse;
+		d=d-1;
+	}
+	WriteLine(num%bse);
+	s=ReadLine();
+}

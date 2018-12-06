@@ -1,0 +1,22 @@
+void main(String[]args){
+	java.io.BufferedReader R=new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
+	long starting=5;
+	int bse=10;
+	for(;;){
+		?String s=R.readLine();
+		if(s==null)break;
+		long n=Long.parseLong(s);
+		n+=starting-2;
+		long digits=1;
+		long expbase=1;
+		long x;
+		for(;(x=digits*expbase*(bse-1))<=n;n-=x){
+			digits++;
+			expbase*=bse;
+		}
+		long num=expbase+n/digits;
+		long d=digits-1-n%digits;
+		for(;d-->0;)num/=bse;
+		System.out.println(num%bse);
+	}
+}

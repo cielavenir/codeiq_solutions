@@ -1,0 +1,14 @@
+#!/usr/bin/ocaml
+let rec calc2 d num bse =
+	if (Int64.compare d 0L)==0 then (Int64.rem num bse) else (calc2 (Int64.sub d 1L) (Int64.div num bse) bse);;
+
+let rec calc digits expbase bse x n =
+	if (Int64.compare x n)>0 then (calc2 (Int64.sub (Int64.sub digits 1L) (Int64.rem n digits)) (Int64.add expbase (Int64.div n digits)) bse) else (calc (Int64.add digits 1L) (Int64.mul expbase bse) bse (Int64.mul (Int64.mul (Int64.add digits 1L) (Int64.mul expbase bse)) (Int64.sub bse 1L)) (Int64.sub n x));;
+
+try
+	while true do
+		Scanf.sscanf (read_line ()) "%Ld" (fun n ->
+			print_string (Int64.to_string (calc 1L 1L 10L 9L (Int64.add n 3L)));
+			print_string "\n"
+		)done;
+with End_of_file -> ();;

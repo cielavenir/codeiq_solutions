@@ -1,0 +1,26 @@
+#!/work/misc/cmd/icon-v950/bin/icon
+procedure main()
+	local n,digits0,expbase,x,num,starting,bse,d
+	local i,t
+	starting:=5
+	bse:=10
+	while n:=read() do{
+		n:=n+starting-2
+		digits0:=1
+		expbase:=1
+		x:=bse-1
+		while x<=n do{
+			n:=n-x
+			digits0:=digits0+1
+			expbase:=expbase*bse
+			x:=digits0*expbase*(bse-1)
+		}
+		num:=expbase+n/digits0
+		d:=digits0-1-n%digits0
+		while d>0 do{
+			num:=num/bse
+			d:=d-1
+		}
+		write(num%bse)
+	}
+end
