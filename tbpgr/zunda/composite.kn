@@ -1,0 +1,25 @@
+func main()
+	var n: int :: 0
+	var cnt: int :: 0
+	var i: int :: 3
+	var s: int :: 0
+	var _: bool
+	do n :: cui@input().toInt(&_)
+	while _composite(cnt < n)
+		do i :: i + 1
+		block _chkprime
+			for j(2, i - 1)
+				if(i % j < 1)
+					break _chkprime
+				end if
+			end for
+			; prime
+			skip _composite
+		end block
+		; composite
+		do cnt :: cnt + 1
+		do s :: s + i
+	end while
+	do cui@print(s.toStr())
+	do cui@print("\n")
+end func

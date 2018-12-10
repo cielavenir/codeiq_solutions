@@ -1,0 +1,38 @@
+func isPrime(i: int): bool
+	for j(2, i - 1)
+		if(i % j < 1)
+			ret false
+		end if
+	end for
+	ret true
+end func
+
+func is4949(i: int): bool
+	if(i <= 0)
+		ret false
+	end if
+	if(i % 10 = 4 | i % 10 = 9)
+		ret true
+	end if
+	ret @is4949(i / 10)
+end func
+
+func main()
+	var n: int :: 0
+	var _: bool
+	do n :: cui@input().toInt(&_)
+	var i: int :: 2
+	var cnt: int :: 0
+	while(cnt < n)
+		if(@is4949(i) & @isPrime(i))
+			do cui@print(i.toStr())
+			if(cnt < n - 1)
+				do cui@print(",")
+			else
+				do cui@print("\n")
+			end if
+			do cnt :: cnt + 1
+		end if
+		do i :: i + 1
+	end while
+end func
