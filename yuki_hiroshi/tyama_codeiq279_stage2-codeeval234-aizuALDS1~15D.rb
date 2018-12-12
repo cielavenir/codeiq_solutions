@@ -1,10 +1,7 @@
 #!/usr/bin/ruby
-#NEWICK=true
-NEWICK=false
-#CODEEVAL=true
-CODEEVAL=false
+OutputMode=:AIZU #:NEWICK(CODEIQ debug),:CODEEVAL,:AIZU,:CODEIQ
 
-CODES=CODEEVAL ? ['0','1'] : ['r','g','b']
+CODES=OutputMode==:CODEEVAL||OutputMode==:AIZU ? ['0','1'] : ['r','g','b']
 WIDTH=CODES.size
 def dfs(str,code) #assign code
 	r=[]
@@ -19,7 +16,7 @@ def dfs(str,code) #assign code
 				i+=1
 			end
 		else
-			r+=[str[i,1]+(CODEEVAL ? ': ' : ':')+code+CODES[c]]
+			r+=[str[i,1]+(OutputMode==:CODEEVAL||OutputMode==:AIZU ? ': ' : ':')+code+CODES[c]]
 		end
 		c+=1
 		i+=1
@@ -30,37 +27,43 @@ end
 def huffman(h)
 	#build huffman tree
 	a=h.map{|k,v|[v,k]}.sort
-	if (h.size-WIDTH)%(WIDTH-1)>0
-		b=a.shift(WIDTH-(h.size-WIDTH)%(WIDTH-1)).transpose
-		a=(a+[[b[0].reduce(:+),'('+b[1]*(NEWICK ? ',' : '')+')']]).sort
-	end
-	while a.size>1
-		b=a.shift(WIDTH).transpose
-		raise if b[0].size!=WIDTH
-		a=(a+[[b[0].reduce(:+),'('+b[1]*(NEWICK ? ',' : '')+')']]).sort
+	if a.size==1
+		a=[[1,'('+a[0][1]+')']]
+	else
+		if (h.size-WIDTH)%(WIDTH-1)>0
+			b=a.shift(WIDTH-(h.size-WIDTH)%(WIDTH-1)).transpose
+			a=(a+[[b[0].reduce(:+),'('+b[1]*(OutputMode==:NEWICK ? ',' : '')+')']]).sort
+		end
+		while a.size>1
+			b=a.shift(WIDTH).transpose
+			raise if b[0].size!=WIDTH
+			a=(a+[[b[0].reduce(:+),'('+b[1]*(OutputMode==:NEWICK ? ',' : '')+')']]).sort
+		end
 	end
 	# a => [[9371, "((O(((Q(XZ)J)VB)YW)I)(AT(U(PFK)L))(E(DRS)(N(GMC)H)))"]]
-	if NEWICK
+	if OutputMode==:NEWICK
 		# ((O,(((Q,(X,Z),J),V,B),Y,W),I),(A,T,(U,(P,F,K),L)),(E,(D,R,S),(N,(G,M,C),H)));
 		puts a[0][1]+';'
 		exit
 	end
 	r=dfs(a[0][1][1..-1],'')
 	#r.sort_by{|e|e.split(':')[1].size}.each{|e|
-	if CODEEVAL
+	if OutputMode==:CODEEVAL
 		puts r.sort*'; '+';'
+	elsif OutputMode==:AIZU
+		p r.map{|e|x,y=e.split(': ');h[x]*y.size}.reduce(:+)
 	else
 		puts r.sort
 	end
 end
 
-if CODEEVAL
+if OutputMode==:CODEEVAL||OutputMode==:AIZU
 	$<.each{|e|
 		h=Hash.new(0)
 		e.chomp.chars{|c|h[c]+=1}
 		huffman(h)
 	}
-else
+elsif OutputMode==:NEWICK||OutputMode==:CODEIQ
 	h={}
 	DATA.each{|e|
 		s,n=e.split
