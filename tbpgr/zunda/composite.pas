@@ -1,12 +1,31 @@
 program composite;
-var i,s,n,cnt: integer;
+var i,s,n,cnt: longint;
 
-function isPrime(i: integer): boolean;
+function isqrt(n: longint): longint;
 var
-	j: integer;
+	y: longint;
+begin
+	if(n<=0) then
+		isqrt:=0
+	else if(n<4) then
+		isqrt:=1
+	else begin
+		isqrt:=0;
+		y:=n;
+		while((isqrt<>y) and (isqrt+1<>y)) do begin
+			isqrt:=y;
+			y:=(n div y+y) div 2;
+		end;
+	end;
+end;
+
+function isPrime(i: longint): boolean;
+var
+	j: longint;
 begin
 	isPrime:=true;
-	for j:=2 to i-1 do begin
+	if i<2 then isPrime:=false;
+	for j:=2 to isqrt(i) do begin
 		if(i mod j < 1) then
 			isPrime:=false;
 	end;

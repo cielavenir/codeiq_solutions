@@ -1,6 +1,17 @@
 #!/usr/bin/env crystal
+def isqrt(n)
+	return 0 if n<=0
+	return 1 if n<4 # 1
+	x,y=0,n
+	while x!=y&&x+1!=y
+		x,y=y,(n/y+y)/2
+	end
+	x
+end
+
 def isPrime(i)
-	(2...i).each{|j|
+	return false if i<2
+	(2..isqrt(i)).each{|j|
 		if i%j<1
 			return false
 		end
