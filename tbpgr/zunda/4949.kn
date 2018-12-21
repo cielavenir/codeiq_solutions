@@ -1,13 +1,13 @@
-func isqrt(i: int): int
-	if(i <= 0)
-	  ret 0
+func isqrt(n: int): int
+	if(n <= 0)
+		ret 0
 	end if
-	if(i < 4)
-	  ret 1
+	if(n < 4)
+		ret 1
 	end if
 	var x: int :: 0
 	var y: int :: n
-	while(x != y & x + 1 != y)
+	while(x <> y & x + 1 <> y)
 		do x :: y
 		do y :: (n / y + y) / 2
 	end while
@@ -15,8 +15,8 @@ func isqrt(i: int): int
 end func
 
 func isPrime(i: int): bool
-  if(i < 2)
-	  ret false
+	if(i < 2)
+		ret false
 	end if
 	for j(2, @isqrt(i))
 		if(i % j < 1)

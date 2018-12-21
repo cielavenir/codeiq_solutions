@@ -1,13 +1,13 @@
-func isqrt(i: int): int
-	if(i <= 0)
-	  ret 0
+func isqrt(n: int): int
+	if(n <= 0)
+		ret 0
 	end if
-	if(i < 4)
-	  ret 1
+	if(n < 4)
+		ret 1
 	end if
 	var x: int :: 0
 	var y: int :: n
-	while(x != y & x + 1 != y)
+	while(x <> y & x + 1 <> y)
 		do x :: y
 		do y :: (n / y + y) / 2
 	end while
@@ -24,8 +24,8 @@ func main()
 	while _composite(cnt < n)
 		do i :: i + 1
 		block _chkprime
-		  if(i < 2)
-			  break _chkprime
+			if(i < 2)
+				break _chkprime
 			end if
 			for j(2, @isqrt(i))
 				if(i % j < 1)
