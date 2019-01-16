@@ -3,6 +3,7 @@ var i,s,n,cnt: longint;
 
 function isqrt(n: longint): longint;
 var
+	x: longint;
 	y: longint;
 begin
 	if(n<=0) then
@@ -10,12 +11,13 @@ begin
 	else if(n<4) then
 		isqrt:=1
 	else begin
-		isqrt:=0;
+		x:=0;
 		y:=n;
-		while((isqrt<>y) and (isqrt+1<>y)) do begin
-			isqrt:=y;
+		while((x<>y) and (x+1<>y)) do begin
+			x:=y;
 			y:=(n div y+y) div 2;
 		end;
+		isqrt:=x;
 	end;
 end;
 
