@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 class Array
 	def unique_permutation(n=self.size)
-		return to_enum(:permutation2,n) unless block_given?
+		return to_enum(:unique_permutation,n) unless block_given?
 		return if n<0||self.size<n
 		a=self.sort
 		yield a[0,n]
