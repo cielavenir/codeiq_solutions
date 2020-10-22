@@ -8,11 +8,25 @@ import (
 
 func compare(a interface{},b interface{}) int{ // a and b must have the same type. If different, runtime error will be triggered. will be fixed after generics is introduced.
 	switch reflect.ValueOf(a).Kind() {
+		case reflect.Int8: fallthrough
+		case reflect.Int16: fallthrough
+		case reflect.Int32: fallthrough
+		case reflect.Int64: fallthrough
 		case reflect.Int:
 			n1:=reflect.ValueOf(a).Int()
 			n2:=reflect.ValueOf(b).Int()
 			if n1<n2 {return -1} else if n1>n2 {return 1} else {return 0}
-		case reflect.Float32: case reflect.Float64:
+		case reflect.Uint8: fallthrough
+		case reflect.Uint16: fallthrough
+		case reflect.Uint32: fallthrough
+		case reflect.Uint64: fallthrough
+		case reflect.Uintptr: fallthrough
+		case reflect.Uint:
+			n1:=reflect.ValueOf(a).Uint()
+			n2:=reflect.ValueOf(b).Uint()
+			if n1<n2 {return -1} else if n1>n2 {return 1} else {return 0}
+		case reflect.Float32: fallthrough
+		case reflect.Float64:
 			n1:=reflect.ValueOf(a).Float()
 			n2:=reflect.ValueOf(b).Float()
 			if n1<n2 {return -1} else if n1>n2 {return 1} else {return 0}
