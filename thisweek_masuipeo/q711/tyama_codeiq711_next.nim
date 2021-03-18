@@ -5,7 +5,7 @@
 import algorithm
 import sequtils
 
-proc next_permutation(a:var seq[int],n0:ref int=nil):bool =
+proc next_permutation[T](a:var seq[T],n0:ref int=nil):bool =
  var n=len(a)
  if n0!=nil:
   n=n0[]
