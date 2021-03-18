@@ -5,7 +5,7 @@
 import algorithm
 import sequtils
 
-proc next_permutation[T](a:var seq[T],n0:ref int=nil):bool =
+proc my_next_permutation[T](a:var seq[T],n0:ref int=nil):bool =
  var n=len(a)
  if n0!=nil:
   n=n0[]
@@ -50,6 +50,6 @@ while true:
    if zero1==zero2: flg+=1
    if one1==one2: flg+=1
   if flg>=2: r+=1
-  if not next_permutation(f0): break
- if not next_permutation(e0): break
+  if not my_next_permutation(f0): break
+ if not my_next_permutation(e0): break
 writeLine(stdout,r) # 527552

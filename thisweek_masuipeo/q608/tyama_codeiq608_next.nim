@@ -5,7 +5,7 @@
 import algorithm
 import sequtils
 
-proc next_permutation[T](a:var seq[T],n0:ref int=nil):bool =
+proc my_next_permutation[T](a:var seq[T],n0:ref int=nil):bool =
  var n=len(a)
  if n0!=nil:
   n=n0[]
@@ -46,6 +46,6 @@ while true:
      break blk
    r+=1
   #i番目の座標とi+1番目の座標が等しければ、「道に重複がある」とみなせる。
-  if not next_permutation(f0): break
- if not next_permutation(e0): break
+  if not my_next_permutation(f0): break
+ if not my_next_permutation(e0): break
 writeLine(stdout,r) # 100360
