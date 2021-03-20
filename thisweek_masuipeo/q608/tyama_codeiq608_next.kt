@@ -31,26 +31,19 @@ fun main(args: Array<String>){
 	val e0=Array<Int>(N*2){0}
 	val f0=Array<Int>(N*2){0}
 	for(i in 0..N-1){e0[N+i]=1;f0[N+i]=1}
-	val e=IntArray(N*2+1)
-	val f=IntArray(N*2+1)
+	val e=Array<Int>(N*2+1){0}
+	val f=Array<Int>(N*2+1){0}
 	do{
 		for(i in 0..N*2-1)e[i+1]=e[i]+e0[i]
 		do{
-			var flg=0
-			var zero1=0
-			var zero2=N
-			var one1=0
-			var one2=N
-			for(i in 0..N*2-1){
-				if(e0[i]==0)zero1+=1
-				if(e0[i]==1)one1+=1
-				if(f0[N*2-1-i]==0)zero2-=1
-				if(f0[N*2-1-i]==1)one2-=1
-				if(zero1==zero2)flg+=1
-				if(one1==one2)flg+=1
+			run outer@{
+				for(i in 0..N*2-1){
+					f[i+1]=f[i]+f0[i]
+					if(e[i]==f[i]&&e[i+1]==f[i+1])return@outer
+				}
+				r++
 			}
-			if(flg>=2)r+=1
 		}while(next_permutation(f0))
 	}while(next_permutation(e0))
-	println(r);
+	println(r)
 }
