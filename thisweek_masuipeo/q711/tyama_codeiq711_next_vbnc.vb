@@ -1,8 +1,8 @@
 imports System
 imports System.Collections.Generic
 module CodeIQRoute
-	function next_permutation(of T as IComparable(of T))(ByRef a as List(of T),optional ByVal _n as integer?=Nothing) as boolean
-		dim n as integer=if(_n.HasValue,_n,a.Count)
+	function next_permutation(ByRef a as List(of integer)) as boolean
+		dim n as integer=a.Count
 		if n<0 orelse a.Count<n
 			return false
 		end if
@@ -24,7 +24,7 @@ module CodeIQRoute
 			end if
 		next
 		dim l as integer=i
-		dim z as T=a(k):a(k)=a(l):a(l)=z
+		dim z as integer=a(k):a(k)=a(l):a(l)=z
 		a.Reverse(k+1,a.Count-(k+1))
 		return true
 	end function
