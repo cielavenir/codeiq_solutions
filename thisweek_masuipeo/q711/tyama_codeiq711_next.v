@@ -1,5 +1,7 @@
 //usr/bin/env v run $0 $@;exit
 
+//iter version cannot be implemented as "range ch" is missing.
+
 fn reverse<T>(mut a []T,start_ int,size int){
 	mut start:=start_
 	for end:=start+size-1;start<end;start++ {

@@ -9,7 +9,7 @@ function reverse(&$a,$start,$size){
 }
 function next_permutation(&$a,$_n=null){
 	$siz=count($a);
-	$n=$_n || $siz;
+	$n=$_n ?? $siz;
 	if($n<0||$siz<$n)return false;
 	$i=0;
 	reverse($a,$n,$siz-$n);
