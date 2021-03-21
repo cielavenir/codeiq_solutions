@@ -1,6 +1,8 @@
 //usr/bin/env go run $0 $@;exit
 package main
 
+// need GO111MODULE=off envvar
+
 import "fmt"
 import "./comb"
 
