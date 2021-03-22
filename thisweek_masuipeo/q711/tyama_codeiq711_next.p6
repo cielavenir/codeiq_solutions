@@ -41,11 +41,11 @@ repeat {
 		my $zero2=$N;
 		my $one1=0;
 		my $one2=$N;
-		loop ($i=0;$i<$N*2;$i++) {
+		loop ($i=0;$i < $N*2;$i++) {
 			if @e0[$i]==0 {$zero1++;}
-			if @e0[$i]==1){$one1++;}
+			if @e0[$i]==1 {$one1++;}
 			if @f0[$N*2-1-$i]==0 {$zero2--;}
-			if $f0[$N*2-1-$i]==1 {$one2--;}
+			if @f0[$N*2-1-$i]==1 {$one2--;}
 			if $zero1==$zero2 {$flg++;}
 			if $one1==$one2 {$flg++;}
 		}
