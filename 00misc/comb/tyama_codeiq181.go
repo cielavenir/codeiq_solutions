@@ -1,6 +1,7 @@
+// +build !go1.18
+
 package comb
 import "reflect"
-//import "fmt"
 
 //reference: https://github.com/mjard/combination/
 //Mine is more optimized and I prefer chan-type API, which is more general.
