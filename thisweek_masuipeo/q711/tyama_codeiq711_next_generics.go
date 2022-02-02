@@ -1,16 +1,10 @@
 //usr/bin/env go run $0 $@;exit
 package main
 import (
+	"constraints"
 	"fmt"
 	"sort"
 )
-
-type ordered interface {
-	type int, int8, int16, int32, int64,
-		uint, uint8, uint16, uint32, uint64, uintptr,
-		float32, float64,
-		string
-}
 
 func reverse[T any](a []T,start int,size int){
 	for end:=start+size-1;start<end;start++ {
@@ -21,7 +15,7 @@ func reverse[T any](a []T,start int,size int){
 	}
 }
 
-func next_permutation[T ordered](a []T, n int) bool{
+func next_permutation[T constraints.Ordered](a []T, n int) bool{
 	if n<0||len(a)<n {return false}
 	reverse(a,n,len(a)-n)
 	i:=0

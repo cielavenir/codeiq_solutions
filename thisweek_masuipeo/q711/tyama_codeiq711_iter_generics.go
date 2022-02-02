@@ -1,13 +1,7 @@
 //usr/bin/env go run $0 $@;exit
 package main
+import "constraints"
 import "fmt"
-
-type ordered interface {
-	type int, int8, int16, int32, int64,
-		uint, uint8, uint16, uint32, uint64, uintptr,
-		float32, float64,
-		string
-}
 
 func reverse[T any](a []T,start int,size int){
 	for end:=start+size-1;start<end;start++ {
@@ -17,7 +11,7 @@ func reverse[T any](a []T,start int,size int){
 		end--
 	}
 }
-func permutation[T ordered](x []T, n int) <- chan []T{
+func permutation[T constraints.Ordered](x []T, n int) <- chan []T{
 	ch := make(chan []T)
 	go func(){
 		if 0<=n&&n<=len(x) {
@@ -29,11 +23,11 @@ func permutation[T ordered](x []T, n int) <- chan []T{
 					for i:=0;i<n;i++ {b[i]=a[i]}
 					ch <- b
 				}
-				reverse(a,n,len(a)-n)
+				reverse[T](a,n,len(a)-n)
 				i:=0
 				for i=len(a)-2;i>=0;i-- {if a[i]<a[i+1] {break}}
 				if i<0 {
-					//reverse(a,0,len(a))
+					//reverse[T](a,0,len(a))
 					break
 				}
 				k:=i
@@ -42,7 +36,7 @@ func permutation[T ordered](x []T, n int) <- chan []T{
 				z:=a[k]
 				a[k]=a[l]
 				a[l]=z
-				reverse(a,k+1,len(a)-(k+1))
+				reverse[T](a,k+1,len(a)-(k+1))
 			}
 		}
 		close(ch)

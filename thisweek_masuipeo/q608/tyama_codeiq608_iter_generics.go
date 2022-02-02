@@ -1,13 +1,7 @@
 //usr/bin/env go run $0 $@;exit
 package main
+import "constraints"
 import "fmt"
-
-type ordered interface {
-	type int, int8, int16, int32, int64,
-		uint, uint8, uint16, uint32, uint64, uintptr,
-		float32, float64,
-		string
-}
 
 func reverse[T any](a []T,start int,size int){
 	for end:=start+size-1;start<end;start++ {
@@ -17,7 +11,7 @@ func reverse[T any](a []T,start int,size int){
 		end--
 	}
 }
-func permutation[T ordered](x []T, n int) <- chan []T{
+func permutation[T constraints.Ordered](x []T, n int) <- chan []T{
 	ch := make(chan []T)
 	go func(){
 		if 0<=n&&n<=len(x) {
