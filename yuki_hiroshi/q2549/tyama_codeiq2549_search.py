@@ -1,7 +1,8 @@
 #!/usr/bin/python
 import sys
 if sys.version_info[0]>=3: raw_input=input
-sys.setrecursionlimit(3000)
+sys.setrecursionlimit(99999)
+hasattr(sys, 'set_int_max_str_digits') and sys.set_int_max_str_digits(999999999)
 
 memo={}
 def dfs(cur,d,c):
