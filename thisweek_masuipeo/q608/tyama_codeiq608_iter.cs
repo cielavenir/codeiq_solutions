@@ -6,8 +6,8 @@ class CodeIQRoute{
 		if(n<0||x.Count<n)yield break;
 		List<T> a=new List<T>(x);
 		a.Sort();
-		yield return a.GetRange(0,n);
 		for(;;){
+			yield return a.GetRange(0,n);
 			int i;
 			a.Reverse(n,a.Count-n);
 			for(i=a.Count-2;i>=0;i--)if(a[i].CompareTo(a[i+1])<0)break;
@@ -20,7 +20,6 @@ class CodeIQRoute{
 			int l=i;
 			T z=a[k];a[k]=a[l];a[l]=z;
 			a.Reverse(k+1,a.Count-(k+1));
-			yield return a.GetRange(0,n);
 		}
 	}
 	const int N=6;

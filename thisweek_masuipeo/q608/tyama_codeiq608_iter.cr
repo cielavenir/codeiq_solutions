@@ -8,8 +8,8 @@ class Array(T)
 				next
 			end
 			a=self.sort
-			nxt.send a[0,n]
 			loop{
+				nxt.send a[0,n]
 				a=a[0,n]+a[n..-1].reverse
 				k=(a.size-2).downto(0).find{|i|a[i]<a[i+1]}
 				if k.is_a?(Nil)
@@ -19,7 +19,6 @@ class Array(T)
 				l=(a.size-1).downto(k+1).find{|i|a[k]<a[i]}.not_nil!
 				a[k],a[l]=a[l],a[k]
 				a=a[0,k+1]+a[k+1..-1].reverse
-				nxt.send a[0,n]
 			}
 		}
 		nxt

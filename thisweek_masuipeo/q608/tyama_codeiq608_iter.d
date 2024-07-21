@@ -14,6 +14,7 @@ auto unique_permutation(T)(T[] a0,int n){
 		if(n<0||siz<n)return;
 		T[] a=new T[a0.length];
 		a[]=a0[];
+		a.sort();
 		int i;
 		for(;;){
 			yield(a[0..n]);

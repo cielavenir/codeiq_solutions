@@ -2,8 +2,9 @@
 use strict;
 sub permute(&@){
 	my $code = shift;
-	my @a = @_;
-	while($code->(@a)){
+	my @a = sort @_;
+	for(;;){
+		$code->(@a);
 		my $i;
 		#push(@a,reverse splice @a, $n);
 		for($i=$#a-1;$i>=0;$i--){if($a[$i]<$a[$i+1]){last;}}
@@ -33,8 +34,6 @@ permute {
 			if($e[$i]==$f[$i]&&$e[$i+1]==$f[$i+1]){last;}
 		}
 		if($i==$N*2){$r++;}
-		1;
 	} @f0;
-	1;
 } @e0;
 print $r."\n";

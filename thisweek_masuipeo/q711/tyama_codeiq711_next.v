@@ -1,7 +1,5 @@
 //usr/bin/env v run $0 $@;exit
 
-//iter version cannot be implemented as "range ch" is missing.
-
 fn reverse<T>(mut a []T,start_ int,size int){
 	mut start:=start_
 	for end:=start+size-1;start<end;start++ {
@@ -14,8 +12,7 @@ fn reverse<T>(mut a []T,start_ int,size int){
 
 fn next_permutation<T>(mut a []T, n int) bool{
 	if n<0||a.len<n {return false}
-	// "int" cannot be "T": https://github.com/vlang/v/issues/6222
-	reverse<int>(mut a,n,a.len-n)
+	reverse<T>(mut a,n,a.len-n)
 	mut i:=0
 	for i=a.len-2;i>=0;i-- {if a[i]<a[i+1] {break}}
 	if i<0 {
@@ -44,16 +41,22 @@ fn main(){
 	}
 	e0.sort()
 	f0.sort()
-	mut e:=[0].repeat(n*2+1)
-	mut f:=[0].repeat(n*2+1)
 	for {
-		for i=0;i<n*2;i++ {e[i+1]=e[i]+e0[i]}
 		for {
+			mut flg:=0
+			mut zero1:=0
+			mut zero2:=n
+			mut one1:=0
+			mut one2:=n
 			for i=0;i<n*2;i++ {
-				f[i+1]=f[i]+f0[i]
-				if e[i]==f[i] && e[i+1]==f[i+1] {break}
+				if e0[i]==0 {zero1 ++}
+				if e0[i]==1 {one1  ++}
+				if f0[i]==0 {zero2 --}
+				if f0[i]==1 {one2  --}
+				if zero1==zero2 {flg++}
+				if one1==one2 {flg++}
 			}
-			if i==n*2 {r++}
+			if flg>=2 {r++}
 			if !next_permutation<int>(mut f0,f0.len) {break}
 		}
 		if !next_permutation<int>(mut e0,e0.len) {break}

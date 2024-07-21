@@ -11,15 +11,14 @@ def permutation(x,n=None):
 	if n==None: n=len(x)
 	if n<0 or len(x)<n: return
 	a=sorted(x)
-	yield tuple(a[0:n])
 	while True:
+		yield tuple(a[0:n])
 		a=a[0:n]+a[len(a)-1:n-1:-1]
 		k=find(lambda i: a[i]<a[i+1], range(len(a)-2,-1,-1))
 		if k==None: break
 		l=find(lambda i: a[k]<a[i], range(len(a)-1,k,-1))
 		a[k],a[l]=a[l],a[k]
 		a=a[0:k+1]+a[len(a)-1:k:-1]
-		yield tuple(a[0:n])
 
 N=6
 e0=[0]*N+[1]*N

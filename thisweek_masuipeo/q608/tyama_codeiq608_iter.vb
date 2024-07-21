@@ -9,8 +9,8 @@ module CodeIQRoute
 		dim a as List(of T)=new List(of T)(x)
 		a.Sort()
 		dim i as integer
-		yield a.GetRange(0,n)
 		while true
+			yield a.GetRange(0,n)
 			a.Reverse(n,a.Count-n)
 			for i=a.Count-2 to 0 step -1
 				if a(i).CompareTo(a(i+1))<0
@@ -30,7 +30,6 @@ module CodeIQRoute
 			dim l as integer=i
 			dim z as T=a(k):a(k)=a(l):a(l)=z
 			a.Reverse(k+1,a.Count-(k+1))
-			yield a.GetRange(0,n)
 		end while
 	end function
 

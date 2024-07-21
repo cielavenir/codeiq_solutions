@@ -12,8 +12,8 @@ proc unique_permutation[T](a0:seq[T],n0:ref int=nil):iterator:seq[T] =
    n=n0[]
   if n<0 or len(a0)<n: return
   var a=a0.sorted
-  yield a[0..n-1]
   while true:
+   yield a[0..n-1]
    a=concat(a[0..n-1],a[n..len(a)-1].reversed)
    var k = -1
    block blk:
@@ -30,7 +30,6 @@ proc unique_permutation[T](a0:seq[T],n0:ref int=nil):iterator:seq[T] =
      a[l]=z
      break
    a=concat(a[0..k],a[k+1..len(a)-1].reversed)
-   yield a[0..n-1]
 
 let N=6
 var e0=concat(repeat(0,N),repeat(1,N))
