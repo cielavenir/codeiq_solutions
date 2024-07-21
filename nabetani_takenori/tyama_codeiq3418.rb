@@ -2,6 +2,7 @@
 def impl( m, b )
   #http://qiita.com/Nabetani/items/ae4231b3ce5ca3c0919c
   #をそのまま使いますねorz
+  #私の答案はO(√N)なのでやむをえない。。
   s=m.to_s(b)
   keta = s.size
   return m if m<=b
@@ -20,6 +21,7 @@ def impl( m, b )
 end
 
 def conv(n,b)
+	# convert palindrome index to palindrome number.
 	if n<b
 		return n
 	end
