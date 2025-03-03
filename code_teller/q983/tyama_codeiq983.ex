@@ -20,7 +20,7 @@ defmodule CodeIQ983 do
 			n=elem Integer.parse(s),0
 			if n != 0 do
 				IO.puts calc(1,1,10,9,n+3)
-				main
+				main()
 			end
 		end
 	end
